@@ -1,0 +1,6860 @@
+{
+  "R2017": {
+    "CSE": {
+      "SEM1": [],
+      "SEM2": [],
+      "SEM3": [],
+      "SEM4": [],
+      "SEM5": [],
+      "SEM6": [],
+      "SEM7": [],
+      "SEM8": []
+    },
+    "ECE": {
+      "SEM1": [],
+      "SEM2": [],
+      "SEM3": [],
+      "SEM4": [],
+      "SEM5": [],
+      "SEM6": [],
+      "SEM7": [],
+      "SEM8": []
+    }
+  },
+  "R2021": {
+    "CSE": {
+      "SEM3": [
+        {
+          "code": "MA3354",
+          "name": "Discrete Mathematics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3351",
+          "name": "Digital Principles & Computer Organization",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3352",
+          "name": "Foundations of Data Science",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3391",
+          "name": "Object Oriented Programming",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3301",
+          "name": "Data Structures",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3381",
+          "name": "Object Oriented Programming Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS3311",
+          "name": "Data Structures Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS3361",
+          "name": "Data Science Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "CS3452",
+          "name": "Theory of Computation",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3491",
+          "name": "Artificial Intelligence & Machine Learning",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3492",
+          "name": "Database Management Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3401",
+          "name": "Algorithms",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3451",
+          "name": "Introduction to Operating Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3461",
+          "name": "Operating Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS3481",
+          "name": "Database Management Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE3451",
+          "name": "Environmental Sciences & Sustainability",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "CS3591",
+          "name": "Computer Networks",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3501",
+          "name": "Compiler Design",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CB3491",
+          "name": "Cryptography & Cyber Security",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3551",
+          "name": "Distributed Computing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CCS3XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CS3581",
+          "name": "Networks Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS3511",
+          "name": "Compiler Design Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "CCS356",
+          "name": "Object Oriented Software Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3691",
+          "name": "Embedded Systems & IoT",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CCS3YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCS3ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCS3WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CS3611",
+          "name": "IoT Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CCS3PP",
+          "name": "Professional Elective Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CCS3AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCS3BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE3791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "CS3711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        },
+        {
+          "code": "GE3771",
+          "name": "Aptitude & Logical Reasoning",
+          "credits": 1,
+          "type": "theory"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "CS3811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "ECE": {
+      "SEM2": [
+        {
+          "code": "HS3251",
+          "name": "Professional English II",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "MA3251",
+          "name": "Statistics & Numerical Methods",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "PH3254",
+          "name": "Physics for Electronics Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BE3251",
+          "name": "Basic Electrical & Electronics Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "GE3251",
+          "name": "Engineering Graphics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3251",
+          "name": "Programming in C",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "GE3271",
+          "name": "Engineering Practices Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS3271",
+          "name": "Programming in C Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM3": [
+        {
+          "code": "MA3351",
+          "name": "Transforms & Partial Differential Equations",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EC3351",
+          "name": "Signals & Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC3301",
+          "name": "Electronic Circuits",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EC3391",
+          "name": "Digital Electronics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EC3352",
+          "name": "Electromagnetic Fields",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC3381",
+          "name": "Analog & Digital Circuits Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EC3311",
+          "name": "Digital Electronics Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EC3361",
+          "name": "Circuit Simulation Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "MA3451",
+          "name": "Probability & Random Processes",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EC3491",
+          "name": "Communication Theory",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EC3401",
+          "name": "Linear Integrated Circuits",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC3451",
+          "name": "Control Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC3492",
+          "name": "Digital Signal Processing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC3461",
+          "name": "Linear Integrated Circuits Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EC3481",
+          "name": "Communication Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE3451",
+          "name": "Environmental Sciences & Sustainability",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "EC3551",
+          "name": "Transmission Lines & RF Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC3591",
+          "name": "Wireless Communication",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC3501",
+          "name": "Microprocessors & Microcontrollers",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EC3552",
+          "name": "VLSI Design",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CEC3XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "EC3511",
+          "name": "Microprocessors Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EC3581",
+          "name": "DSP & Comm. Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "EC3651",
+          "name": "Embedded Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC3691",
+          "name": "Antenna & Wave Propagation",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CEC3YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CEC3ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CEC3WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "EC3611",
+          "name": "VLSI Design Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EC3681",
+          "name": "Embedded Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CEC3AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CEC3BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE3791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "EC3711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "EC3811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "IT": {
+      "SEM3": [
+        {
+          "code": "MA3354",
+          "name": "Discrete Mathematics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3351",
+          "name": "Digital Principles & Computer Organization",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "IT3301",
+          "name": "Object Oriented Programming",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3301",
+          "name": "Data Structures",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "IT3302",
+          "name": "Software Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "IT3311",
+          "name": "OOP Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "IT3352",
+          "name": "Data Structures & Algorithms Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "IT3361",
+          "name": "Software Engineering Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "CS3452",
+          "name": "Theory of Computation",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3492",
+          "name": "Database Management Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3491",
+          "name": "Artificial Intelligence & Machine Learning",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3401",
+          "name": "Algorithms",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3451",
+          "name": "Introduction to Operating Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3461",
+          "name": "Operating Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS3481",
+          "name": "Database Management Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE3451",
+          "name": "Environmental Sciences & Sustainability",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "CS3591",
+          "name": "Computer Networks",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "IT3501",
+          "name": "Web Technology",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CB3491",
+          "name": "Cryptography & Cyber Security",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "IT3502",
+          "name": "Digital Signal Processing",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CIT3XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CS3581",
+          "name": "Networks Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "IT3511",
+          "name": "Web Technology Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "IT3601",
+          "name": "Mobile Applications Development",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "IT3602",
+          "name": "Software Testing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CIT3YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CIT3ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CIT3WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "IT3611",
+          "name": "Mobile Application Development Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "IT3681",
+          "name": "Software Testing Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "IT3701",
+          "name": "Information Management",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CIT3AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CIT3BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE3791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "IT3711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "IT3811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "AIDS": {
+      "SEM3": [
+        {
+          "code": "MA3354",
+          "name": "Discrete Mathematics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3351",
+          "name": "Digital Principles & Computer Organization",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "AD3301",
+          "name": "Data Exploration & Visualization",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3301",
+          "name": "Data Structures",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3391",
+          "name": "Object Oriented Programming",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3311",
+          "name": "Data Structures Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS3381",
+          "name": "Object Oriented Programming Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "AD3311",
+          "name": "Data Exploration Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "MA3391",
+          "name": "Probability & Statistics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3492",
+          "name": "Database Management Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3491",
+          "name": "Artificial Intelligence & Machine Learning",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3401",
+          "name": "Algorithms",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "AD3401",
+          "name": "Neural Networks & Deep Learning",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3481",
+          "name": "DBMS Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "AD3411",
+          "name": "AI & ML Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE3451",
+          "name": "Environmental Sciences & Sustainability",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "AD3501",
+          "name": "Natural Language Processing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "AD3502",
+          "name": "Big Data & Cloud Computing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3591",
+          "name": "Computer Networks",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "AD3551",
+          "name": "Computer Vision",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CAD3XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "AD3511",
+          "name": "NLP Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "AD3581",
+          "name": "Big Data Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "AD3601",
+          "name": "Reinforcement Learning",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "AD3691",
+          "name": "IoT & Edge AI",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CAD3YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CAD3ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CAD3WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "AD3611",
+          "name": "AI Applications Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "AD3681",
+          "name": "IoT Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CAD3AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CAD3BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE3791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "AD3711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "AD3811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "CSBS": {
+      "SEM3": [
+        {
+          "code": "MA3354",
+          "name": "Discrete Mathematics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3351",
+          "name": "Digital Principles & Computer Organization",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CB3301",
+          "name": "Business Analytics",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3301",
+          "name": "Data Structures",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3391",
+          "name": "Object Oriented Programming",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3311",
+          "name": "Data Structures Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS3381",
+          "name": "Object Oriented Programming Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CB3311",
+          "name": "Business Analytics Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "CS3452",
+          "name": "Theory of Computation",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3492",
+          "name": "Database Management Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3491",
+          "name": "AI & Machine Learning",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3401",
+          "name": "Algorithms",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CB3401",
+          "name": "Financial Management",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3481",
+          "name": "DBMS Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CB3411",
+          "name": "AI & Business Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE3451",
+          "name": "Environmental Sciences & Sustainability",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "CS3591",
+          "name": "Computer Networks",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CB3491",
+          "name": "Cryptography & Cyber Security",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CB3501",
+          "name": "Supply Chain Management",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CB3502",
+          "name": "Data Mining & Warehousing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CCB3XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CS3581",
+          "name": "Networks Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CB3511",
+          "name": "Data Mining Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "CB3601",
+          "name": "Digital Marketing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CB3602",
+          "name": "ERP Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CCB3YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCB3ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCB3WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CB3611",
+          "name": "Business Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CB3681",
+          "name": "Project Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CCB3AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCB3BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE3791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "CB3711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "CB3811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "CSD": {
+      "SEM3": [
+        {
+          "code": "MA3354",
+          "name": "Discrete Mathematics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3351",
+          "name": "Digital Principles & Computer Organization",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CD3301",
+          "name": "Design Thinking & Innovation",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3301",
+          "name": "Data Structures",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3391",
+          "name": "Object Oriented Programming",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3311",
+          "name": "Data Structures Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS3381",
+          "name": "OOP Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CD3311",
+          "name": "UI/UX Design Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "CS3452",
+          "name": "Theory of Computation",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3492",
+          "name": "Database Management Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3491",
+          "name": "AI & Machine Learning",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3401",
+          "name": "Algorithms",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CD3401",
+          "name": "Human Computer Interaction",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3481",
+          "name": "DBMS Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CD3411",
+          "name": "HCI Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE3451",
+          "name": "Environmental Sciences & Sustainability",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "CS3591",
+          "name": "Computer Networks",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CD3501",
+          "name": "Interactive Media Design",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CD3502",
+          "name": "Computer Graphics & Visualization",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CB3491",
+          "name": "Cryptography & Cyber Security",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CCD3XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CD3511",
+          "name": "Graphics & Design Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS3581",
+          "name": "Networks Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "CD3601",
+          "name": "Game Design & Development",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CD3602",
+          "name": "AR / VR Technologies",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CCD3YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCD3ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCD3WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CD3611",
+          "name": "Game Development Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CD3681",
+          "name": "AR/VR Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CCD3AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCD3BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE3791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "CD3711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "CD3811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "CSE_CS": {
+      "SEM3": [
+        {
+          "code": "MA3354",
+          "name": "Discrete Mathematics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3351",
+          "name": "Digital Principles & Computer Organization",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CY3301",
+          "name": "Computer System Security",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3301",
+          "name": "Data Structures",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3391",
+          "name": "Object Oriented Programming",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3311",
+          "name": "Data Structures Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS3381",
+          "name": "OOP Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CY3311",
+          "name": "Security Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "CS3452",
+          "name": "Theory of Computation",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3492",
+          "name": "Database Management Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3491",
+          "name": "AI & Machine Learning",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3401",
+          "name": "Algorithms",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CY3401",
+          "name": "Network Security",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3481",
+          "name": "DBMS Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CY3411",
+          "name": "Network Security Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE3451",
+          "name": "Environmental Sciences & Sustainability",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "CS3591",
+          "name": "Computer Networks",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CY3501",
+          "name": "Ethical Hacking & Penetration Testing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CY3502",
+          "name": "Digital Forensics",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CB3491",
+          "name": "Cryptography & Cyber Security",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CCY3XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CY3511",
+          "name": "Ethical Hacking Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS3581",
+          "name": "Networks Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "CY3601",
+          "name": "Malware Analysis",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CY3602",
+          "name": "Cloud Security",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CCY3YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCY3ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCY3WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CY3611",
+          "name": "Forensics Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CY3681",
+          "name": "Cloud Security Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CCY3AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCY3BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE3791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "CY3711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "CY3811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "AIML": {
+      "SEM3": [
+        {
+          "code": "MA3354",
+          "name": "Discrete Mathematics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3351",
+          "name": "Digital Principles & Computer Organization",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "AL3301",
+          "name": "Machine Learning Foundations",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3301",
+          "name": "Data Structures",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3391",
+          "name": "Object Oriented Programming",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3311",
+          "name": "Data Structures Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS3381",
+          "name": "OOP Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "AL3311",
+          "name": "ML Foundations Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "MA3391",
+          "name": "Probability & Statistics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3492",
+          "name": "Database Management Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3491",
+          "name": "Artificial Intelligence & Machine Learning",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS3401",
+          "name": "Algorithms",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "AL3401",
+          "name": "Deep Learning",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS3481",
+          "name": "DBMS Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "AL3411",
+          "name": "Deep Learning Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE3451",
+          "name": "Environmental Sciences & Sustainability",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "CS3591",
+          "name": "Computer Networks",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "AL3501",
+          "name": "Natural Language Processing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "AL3502",
+          "name": "Computer Vision",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CB3491",
+          "name": "Cryptography & Cyber Security",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CAL3XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "AL3511",
+          "name": "NLP Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "AL3581",
+          "name": "Computer Vision Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "AL3601",
+          "name": "Reinforcement Learning",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "AL3602",
+          "name": "Generative AI & LLMs",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CAL3YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CAL3ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CAL3WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "AL3611",
+          "name": "AI Applications Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "AL3681",
+          "name": "Gen AI Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CAL3AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CAL3BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE3791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "AL3711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "AL3811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "EEE": {
+      "SEM2": [
+        {
+          "code": "HS3251",
+          "name": "Professional English II",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "MA3251",
+          "name": "Statistics & Numerical Methods",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "PH3252",
+          "name": "Physics for Mechanical Sciences",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE3251",
+          "name": "Circuit Theory",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EE3252",
+          "name": "Electron Devices & Circuits",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "GE3251",
+          "name": "Engineering Graphics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EE3271",
+          "name": "Electric Circuits Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE3271",
+          "name": "Engineering Practices Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM3": [
+        {
+          "code": "MA3351",
+          "name": "Transforms & Partial Differential Equations",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EE3351",
+          "name": "Digital Logic Circuits",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EE3391",
+          "name": "Electromagnetic Theory",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE3301",
+          "name": "Electrical Machines I",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE3352",
+          "name": "Signals & Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE3302",
+          "name": "Measurements & Instrumentation",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE3311",
+          "name": "Electrical Machines Lab I",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EE3381",
+          "name": "Measurements Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "MA3491",
+          "name": "Numerical Methods",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EE3401",
+          "name": "Electrical Machines II",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE3402",
+          "name": "Transmission & Distribution",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE3451",
+          "name": "Linear Integrated Circuits",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE3491",
+          "name": "Control Systems",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EE3404",
+          "name": "Power System Analysis",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE3411",
+          "name": "Electrical Machines Lab II",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EE3461",
+          "name": "Linear & Digital ICs Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "EE3501",
+          "name": "Power Electronics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EE3551",
+          "name": "Microprocessors & Microcontrollers",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE3591",
+          "name": "Digital Signal Processing",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EE3502",
+          "name": "Power System Operation & Control",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CEE3XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "EE3511",
+          "name": "Control & Instrumentation Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EE3512",
+          "name": "Microprocessors Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "EE3601",
+          "name": "Solid State Drives",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE3602",
+          "name": "Protection & Switchgear",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE3691",
+          "name": "Embedded Systems",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CEE3YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CEE3ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "EE3611",
+          "name": "Power Electronics & Drives Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EE3681",
+          "name": "Power Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "EE3701",
+          "name": "High Voltage Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CEE3AA",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CEE3BB",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE3791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "EE3711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "EE3811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "CEE3CC",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "MECH": {
+      "SEM3": [
+        {
+          "code": "MA3351",
+          "name": "Transforms & Partial Differential Equations",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "ME3391",
+          "name": "Engineering Thermodynamics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CE3391",
+          "name": "Strength of Materials",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "ME3351",
+          "name": "Manufacturing Technology I",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME3301",
+          "name": "Fluid Mechanics & Machinery",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME3361",
+          "name": "Manufacturing Technology Lab I",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "ME3381",
+          "name": "Computer Aided Machine Drawing",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "ME3311",
+          "name": "Strength of Materials Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "MA3491",
+          "name": "Numerical Methods",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "ME3451",
+          "name": "Manufacturing Technology II",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME3492",
+          "name": "Kinematics of Machinery",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME3493",
+          "name": "Thermal Engineering I",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME3491",
+          "name": "Engineering Metallurgy",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME3494",
+          "name": "Fluid Mechanics & Machinery",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "ME3461",
+          "name": "Manufacturing Technology Lab II",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "ME3462",
+          "name": "Thermal Engineering Lab I",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "ME3593",
+          "name": "Design of Machine Elements",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME3594",
+          "name": "Dynamics of Machines",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME3595",
+          "name": "Thermal Engineering II",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME3501",
+          "name": "Metrology & Measurements",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CME3XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "ME3511",
+          "name": "Dynamics Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "ME3512",
+          "name": "Thermal Engineering Lab II",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "ME3651",
+          "name": "Design of Transmission Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME3652",
+          "name": "Finite Element Analysis",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME3691",
+          "name": "CAD / CAM",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CME3YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CME3ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "ME3681",
+          "name": "CAD / CAM Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "ME3682",
+          "name": "Design & Fabrication Project",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "ME3792",
+          "name": "Power Plant Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CME3AA",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CME3BB",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE3791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "ME3711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "ME3811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "CME3CC",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "CIVIL": {
+      "SEM3": [
+        {
+          "code": "MA3351",
+          "name": "Transforms & Partial Differential Equations",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CE3391",
+          "name": "Construction Materials",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE3392",
+          "name": "Engineering Geology",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE3301",
+          "name": "Strength of Materials I",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CE3351",
+          "name": "Surveying",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE3394",
+          "name": "Fluid Mechanics",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE3311",
+          "name": "Surveying Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CE3381",
+          "name": "Strength of Materials Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "MA3491",
+          "name": "Numerical Methods",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CE3401",
+          "name": "Construction Techniques",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE3402",
+          "name": "Strength of Materials II",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE3491",
+          "name": "Soil Mechanics",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE3404",
+          "name": "Concrete Technology",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE3403",
+          "name": "Applied Hydraulic Engineering",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CE3411",
+          "name": "Hydraulic Engineering Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CE3461",
+          "name": "Soil Mechanics Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "CE3501",
+          "name": "Design of RC Elements",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CE3502",
+          "name": "Structural Analysis I",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE3591",
+          "name": "Foundation Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE3504",
+          "name": "Water Supply Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CCE3XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CE3511",
+          "name": "Concrete & Highway Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CE3513",
+          "name": "Survey Camp",
+          "credits": 1,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "CE3601",
+          "name": "Design of Steel Structures",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE3602",
+          "name": "Structural Analysis II",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE3603",
+          "name": "Highway Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE3604",
+          "name": "Wastewater Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CCE3YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CE3611",
+          "name": "Environmental Engineering Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CE3612",
+          "name": "Quantity Surveying",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CE3701",
+          "name": "Estimation & Quantity Surveying",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CCE3AA",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCE3BB",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE3791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "CE3711",
+          "name": "Design & Drawing Lab",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "CE3811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "CCE3CC",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "BME": {
+      "SEM2": [
+        {
+          "code": "HS3251",
+          "name": "Professional English II",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "MA3251",
+          "name": "Statistics & Numerical Methods",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "PH3254",
+          "name": "Physics for Electronics Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BE3251",
+          "name": "Basic Electrical & Electronics Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "GE3251",
+          "name": "Engineering Graphics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "BM3251",
+          "name": "Human Anatomy & Physiology",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "GE3271",
+          "name": "Engineering Practices Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "BM3271",
+          "name": "Anatomy & Physiology Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM3": [
+        {
+          "code": "MA3351",
+          "name": "Transforms & PDE",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "BM3301",
+          "name": "Biomedical Instrumentation",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BM3302",
+          "name": "Biomechanics",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC3391",
+          "name": "Digital Electronics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "BM3351",
+          "name": "Signals & Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BM3311",
+          "name": "Biomedical Instrumentation Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EC3311",
+          "name": "Digital Electronics Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS3271",
+          "name": "Programming in C Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "BM3401",
+          "name": "Medical Imaging",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "BM3402",
+          "name": "Biosensors & Transducers",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BM3403",
+          "name": "Biomedical Signal Processing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BM3451",
+          "name": "Pathology & Microbiology",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC3401",
+          "name": "Linear Integrated Circuits",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BM3411",
+          "name": "Medical Imaging Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "BM3481",
+          "name": "Signal Processing Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE3451",
+          "name": "Environmental Sciences",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "BM3501",
+          "name": "Biomaterials",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BM3502",
+          "name": "Hospital Management",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BM3503",
+          "name": "Rehabilitation Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BM3551",
+          "name": "Therapeutic Equipment",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CBM3XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "BM3511",
+          "name": "Biomaterials Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "BM3581",
+          "name": "Virtual Instrumentation Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "BM3601",
+          "name": "Clinical Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BM3691",
+          "name": "Artificial Organs & Prosthetics",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CBM3YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CBM3ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CBM3WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "BM3611",
+          "name": "Clinical Engineering Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "BM3681",
+          "name": "Mini Project",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CBM3AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CBM3BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE3791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "BM3711",
+          "name": "Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "BM3811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "MECT": {
+      "SEM3": [
+        {
+          "code": "MA3351",
+          "name": "Transforms & Partial Differential Equations",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "MT3301",
+          "name": "Sensors & Actuators",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "MT3302",
+          "name": "Electrical Machines & Drives",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME3391",
+          "name": "Engineering Thermodynamics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CE3391",
+          "name": "Strength of Materials",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "MT3311",
+          "name": "Sensors & Actuators Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "MT3381",
+          "name": "Electrical Drives Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "ME3381",
+          "name": "CAD Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "MT3401",
+          "name": "Control Systems",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "MT3402",
+          "name": "Robotics",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "MT3403",
+          "name": "Embedded Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "MT3404",
+          "name": "PLC & SCADA",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "MT3451",
+          "name": "Hydraulics & Pneumatics",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "MT3411",
+          "name": "Robotics Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "MT3461",
+          "name": "Embedded Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE3451",
+          "name": "Environmental Sciences",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "MT3501",
+          "name": "Mechatronics System Design",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "MT3502",
+          "name": "CNC Machines",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "MT3503",
+          "name": "MEMS",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "MT3551",
+          "name": "Industrial IoT",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CMT3XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "MT3511",
+          "name": "PLC & SCADA Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "MT3581",
+          "name": "CNC Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "MT3601",
+          "name": "Machine Vision",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CMT3YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CMT3ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CMT3WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "MT3611",
+          "name": "Machine Vision Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "MT3681",
+          "name": "Mini Project",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CMT3AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CMT3BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE3791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "MT3711",
+          "name": "Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "MT3811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    }
+  },
+  "R2025": {
+    "CSE": {
+      "SEM3": [
+        {
+          "code": "MA4354",
+          "name": "Discrete Mathematics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4351",
+          "name": "Digital Principles & Computer Organization",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4352",
+          "name": "Foundations of Data Science",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4391",
+          "name": "Object Oriented Programming",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4301",
+          "name": "Data Structures",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4381",
+          "name": "Object Oriented Programming Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS4311",
+          "name": "Data Structures Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS4361",
+          "name": "Data Science Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "CS4452",
+          "name": "Theory of Computation",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4491",
+          "name": "Artificial Intelligence & Machine Learning",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4492",
+          "name": "Database Management Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4401",
+          "name": "Algorithms",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4451",
+          "name": "Introduction to Operating Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4461",
+          "name": "Operating Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS4481",
+          "name": "Database Management Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE4451",
+          "name": "Environmental Sciences & Sustainability",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "CS4591",
+          "name": "Computer Networks",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4501",
+          "name": "Compiler Design",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CB4491",
+          "name": "Cryptography & Cyber Security",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4551",
+          "name": "Distributed Computing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CCS4XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CS4581",
+          "name": "Networks Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS4511",
+          "name": "Compiler Design Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "CCS456",
+          "name": "Object Oriented Software Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4691",
+          "name": "Embedded Systems & IoT",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CCS4YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCS4ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCS4WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CS4611",
+          "name": "IoT Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CCS4PP",
+          "name": "Professional Elective Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CCS4AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCS4BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE4791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "CS4711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        },
+        {
+          "code": "GE4771",
+          "name": "Aptitude & Logical Reasoning",
+          "credits": 1,
+          "type": "theory"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "CS4811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "ECE": {
+      "SEM2": [
+        {
+          "code": "HS4251",
+          "name": "Professional English II",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "MA4251",
+          "name": "Statistics & Numerical Methods",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "PH4254",
+          "name": "Physics for Electronics Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BE4251",
+          "name": "Basic Electrical & Electronics Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "GE4251",
+          "name": "Engineering Graphics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4251",
+          "name": "Programming in C",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "GE4271",
+          "name": "Engineering Practices Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS4271",
+          "name": "Programming in C Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM3": [
+        {
+          "code": "MA4351",
+          "name": "Transforms & Partial Differential Equations",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EC4351",
+          "name": "Signals & Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC4301",
+          "name": "Electronic Circuits",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EC4391",
+          "name": "Digital Electronics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EC4352",
+          "name": "Electromagnetic Fields",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC4381",
+          "name": "Analog & Digital Circuits Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EC4311",
+          "name": "Digital Electronics Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EC4361",
+          "name": "Circuit Simulation Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "MA4451",
+          "name": "Probability & Random Processes",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EC4491",
+          "name": "Communication Theory",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EC4401",
+          "name": "Linear Integrated Circuits",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC4451",
+          "name": "Control Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC4492",
+          "name": "Digital Signal Processing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC4461",
+          "name": "Linear Integrated Circuits Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EC4481",
+          "name": "Communication Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE4451",
+          "name": "Environmental Sciences & Sustainability",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "EC4551",
+          "name": "VLSI Design",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC4591",
+          "name": "Wireless Communication",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC4501",
+          "name": "Microprocessors & Microcontrollers",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EC4552",
+          "name": "Transmission Lines & RF Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CEC4XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "EC4511",
+          "name": "Microprocessors Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EC4581",
+          "name": "DSP & Comm. Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "EC4651",
+          "name": "Embedded Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC4691",
+          "name": "Antenna & Wave Propagation",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CEC4YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CEC4ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CEC4WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "EC4611",
+          "name": "VLSI Design Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EC4681",
+          "name": "Embedded Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CEC4AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CEC4BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE4791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "EC4711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "EC4811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "IT": {
+      "SEM3": [
+        {
+          "code": "MA4354",
+          "name": "Discrete Mathematics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4351",
+          "name": "Digital Principles & Computer Organization",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "IT4301",
+          "name": "Object Oriented Programming",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4301",
+          "name": "Data Structures",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "IT4302",
+          "name": "Software Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "IT4311",
+          "name": "OOP Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "IT4352",
+          "name": "Data Structures & Algorithms Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "IT4361",
+          "name": "Software Engineering Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "CS4452",
+          "name": "Theory of Computation",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4492",
+          "name": "Database Management Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4491",
+          "name": "Artificial Intelligence & Machine Learning",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4401",
+          "name": "Algorithms",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4451",
+          "name": "Introduction to Operating Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4461",
+          "name": "Operating Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS4481",
+          "name": "Database Management Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE4451",
+          "name": "Environmental Sciences & Sustainability",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "CS4591",
+          "name": "Computer Networks",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "IT4501",
+          "name": "Web Technology",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CB4491",
+          "name": "Cryptography & Cyber Security",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "IT4502",
+          "name": "Digital Signal Processing",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CIT4XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CS4581",
+          "name": "Networks Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "IT4511",
+          "name": "Web Technology Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "IT4601",
+          "name": "Mobile Applications Development",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "IT4602",
+          "name": "Software Testing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CIT4YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CIT4ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CIT4WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "IT4611",
+          "name": "Mobile Application Development Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "IT4681",
+          "name": "Software Testing Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "IT4701",
+          "name": "Information Management",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CIT4AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CIT4BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE4791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "IT4711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "IT4811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "AIDS": {
+      "SEM3": [
+        {
+          "code": "MA4354",
+          "name": "Discrete Mathematics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4351",
+          "name": "Digital Principles & Computer Organization",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "AD4301",
+          "name": "Data Exploration & Visualization",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4301",
+          "name": "Data Structures",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4391",
+          "name": "Object Oriented Programming",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4311",
+          "name": "Data Structures Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS4381",
+          "name": "Object Oriented Programming Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "AD4311",
+          "name": "Data Exploration Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "MA4391",
+          "name": "Probability & Statistics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4492",
+          "name": "Database Management Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4491",
+          "name": "Artificial Intelligence & Machine Learning",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4401",
+          "name": "Algorithms",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "AD4401",
+          "name": "Neural Networks & Deep Learning",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4481",
+          "name": "DBMS Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "AD4411",
+          "name": "AI & ML Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE4451",
+          "name": "Environmental Sciences & Sustainability",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "AD4501",
+          "name": "Natural Language Processing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "AD4502",
+          "name": "Big Data & Cloud Computing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4591",
+          "name": "Computer Networks",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "AD4551",
+          "name": "Computer Vision",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CAD4XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "AD4511",
+          "name": "NLP Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "AD4581",
+          "name": "Big Data Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "AD4601",
+          "name": "Reinforcement Learning",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "AD4691",
+          "name": "IoT & Edge AI",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CAD4YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CAD4ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CAD4WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "AD4611",
+          "name": "AI Applications Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "AD4681",
+          "name": "IoT Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CAD4AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CAD4BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE4791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "AD4711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "AD4811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "CSBS": {
+      "SEM3": [
+        {
+          "code": "MA4354",
+          "name": "Discrete Mathematics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4351",
+          "name": "Digital Principles & Computer Organization",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CB4301",
+          "name": "Business Analytics",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4301",
+          "name": "Data Structures",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4391",
+          "name": "Object Oriented Programming",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4311",
+          "name": "Data Structures Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS4381",
+          "name": "Object Oriented Programming Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CB4311",
+          "name": "Business Analytics Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "CS4452",
+          "name": "Theory of Computation",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4492",
+          "name": "Database Management Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4491",
+          "name": "AI & Machine Learning",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4401",
+          "name": "Algorithms",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CB4401",
+          "name": "Financial Management",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4481",
+          "name": "DBMS Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CB4411",
+          "name": "AI & Business Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE4451",
+          "name": "Environmental Sciences & Sustainability",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "CS4591",
+          "name": "Computer Networks",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CB4491",
+          "name": "Cryptography & Cyber Security",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CB4501",
+          "name": "Supply Chain Management",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CB4502",
+          "name": "Data Mining & Warehousing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CCB4XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CS4581",
+          "name": "Networks Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CB4511",
+          "name": "Data Mining Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "CB4601",
+          "name": "Digital Marketing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CB4602",
+          "name": "ERP Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CCB4YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCB4ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCB4WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CB4611",
+          "name": "Business Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CB4681",
+          "name": "Project Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CCB4AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCB4BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE4791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "CB4711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "CB4811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "CSD": {
+      "SEM3": [
+        {
+          "code": "MA4354",
+          "name": "Discrete Mathematics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4351",
+          "name": "Digital Principles & Computer Organization",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CD4301",
+          "name": "Design Thinking & Innovation",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4301",
+          "name": "Data Structures",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4391",
+          "name": "Object Oriented Programming",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4311",
+          "name": "Data Structures Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS4381",
+          "name": "OOP Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CD4311",
+          "name": "UI/UX Design Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "CS4452",
+          "name": "Theory of Computation",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4492",
+          "name": "Database Management Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4491",
+          "name": "AI & Machine Learning",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4401",
+          "name": "Algorithms",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CD4401",
+          "name": "Human Computer Interaction",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4481",
+          "name": "DBMS Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CD4411",
+          "name": "HCI Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE4451",
+          "name": "Environmental Sciences & Sustainability",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "CS4591",
+          "name": "Computer Networks",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CD4501",
+          "name": "Interactive Media Design",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CD4502",
+          "name": "Computer Graphics & Visualization",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CB4491",
+          "name": "Cryptography & Cyber Security",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CCD4XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CD4511",
+          "name": "Graphics & Design Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS4581",
+          "name": "Networks Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "CD4601",
+          "name": "Game Design & Development",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CD4602",
+          "name": "AR / VR Technologies",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CCD4YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCD4ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCD4WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CD4611",
+          "name": "Game Development Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CD4681",
+          "name": "AR/VR Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CCD4AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCD4BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE4791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "CD4711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "CD4811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "CSE_CS": {
+      "SEM3": [
+        {
+          "code": "MA4354",
+          "name": "Discrete Mathematics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4351",
+          "name": "Digital Principles & Computer Organization",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CY4301",
+          "name": "Computer System Security",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4301",
+          "name": "Data Structures",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4391",
+          "name": "Object Oriented Programming",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4311",
+          "name": "Data Structures Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS4381",
+          "name": "OOP Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CY4311",
+          "name": "Security Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "CS4452",
+          "name": "Theory of Computation",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4492",
+          "name": "Database Management Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4491",
+          "name": "AI & Machine Learning",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4401",
+          "name": "Algorithms",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CY4401",
+          "name": "Network Security",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4481",
+          "name": "DBMS Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CY4411",
+          "name": "Network Security Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE4451",
+          "name": "Environmental Sciences & Sustainability",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "CS4591",
+          "name": "Computer Networks",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CY4501",
+          "name": "Ethical Hacking & Penetration Testing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CY4502",
+          "name": "Digital Forensics",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CB4491",
+          "name": "Cryptography & Cyber Security",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CCY4XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CY4511",
+          "name": "Ethical Hacking Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS4581",
+          "name": "Networks Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "CY4601",
+          "name": "Malware Analysis",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CY4602",
+          "name": "Cloud Security",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CCY4YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCY4ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCY4WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CY4611",
+          "name": "Forensics Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CY4681",
+          "name": "Cloud Security Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CCY4AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCY4BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE4791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "CY4711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "CY4811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "AIML": {
+      "SEM3": [
+        {
+          "code": "MA4354",
+          "name": "Discrete Mathematics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4351",
+          "name": "Digital Principles & Computer Organization",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "AL4301",
+          "name": "Machine Learning Foundations",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4301",
+          "name": "Data Structures",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4391",
+          "name": "Object Oriented Programming",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4311",
+          "name": "Data Structures Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS4381",
+          "name": "OOP Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "AL4311",
+          "name": "ML Foundations Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "MA4391",
+          "name": "Probability & Statistics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4492",
+          "name": "Database Management Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4491",
+          "name": "Artificial Intelligence & Machine Learning",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CS4401",
+          "name": "Algorithms",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "AL4401",
+          "name": "Deep Learning",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CS4481",
+          "name": "DBMS Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "AL4411",
+          "name": "Deep Learning Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE4451",
+          "name": "Environmental Sciences & Sustainability",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "CS4591",
+          "name": "Computer Networks",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "AL4501",
+          "name": "Natural Language Processing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "AL4502",
+          "name": "Computer Vision",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CB4491",
+          "name": "Cryptography & Cyber Security",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CAL4XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "AL4511",
+          "name": "NLP Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "AL4581",
+          "name": "Computer Vision Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "AL4601",
+          "name": "Reinforcement Learning",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "AL4602",
+          "name": "Generative AI & LLMs",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CAL4YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CAL4ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CAL4WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "AL4611",
+          "name": "AI Applications Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "AL4681",
+          "name": "Gen AI Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CAL4AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CAL4BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE4791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "AL4711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "AL4811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "EEE": {
+      "SEM2": [
+        {
+          "code": "HS4251",
+          "name": "Professional English II",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "MA4251",
+          "name": "Statistics & Numerical Methods",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "PH4252",
+          "name": "Physics for Mechanical Sciences",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE4251",
+          "name": "Circuit Theory",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EE4252",
+          "name": "Electron Devices & Circuits",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "GE4251",
+          "name": "Engineering Graphics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EE4271",
+          "name": "Electric Circuits Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE4271",
+          "name": "Engineering Practices Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM3": [
+        {
+          "code": "MA4351",
+          "name": "Transforms & Partial Differential Equations",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EE4351",
+          "name": "Digital Logic Circuits",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EE4391",
+          "name": "Electromagnetic Theory",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE4301",
+          "name": "Electrical Machines I",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE4352",
+          "name": "Signals & Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE4302",
+          "name": "Measurements & Instrumentation",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE4311",
+          "name": "Electrical Machines Lab I",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EE4381",
+          "name": "Measurements Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "MA4491",
+          "name": "Numerical Methods",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EE4401",
+          "name": "Electrical Machines II",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE4402",
+          "name": "Transmission & Distribution",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE4451",
+          "name": "Linear Integrated Circuits",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE4491",
+          "name": "Control Systems",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EE4404",
+          "name": "Power System Analysis",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE4411",
+          "name": "Electrical Machines Lab II",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EE4461",
+          "name": "Linear & Digital ICs Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "EE4501",
+          "name": "Power Electronics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EE4551",
+          "name": "Microprocessors & Microcontrollers",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE4591",
+          "name": "Digital Signal Processing",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "EE4502",
+          "name": "Power System Operation & Control",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CEE4XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "EE4511",
+          "name": "Control & Instrumentation Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EE4512",
+          "name": "Microprocessors Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "EE4601",
+          "name": "Solid State Drives",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE4602",
+          "name": "Protection & Switchgear",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EE4691",
+          "name": "Embedded Systems",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CEE4YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CEE4ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "EE4611",
+          "name": "Power Electronics & Drives Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EE4681",
+          "name": "Power Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "EE4701",
+          "name": "High Voltage Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CEE4AA",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CEE4BB",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE4791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "EE4711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "EE4811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "CEE4CC",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "MECH": {
+      "SEM3": [
+        {
+          "code": "MA4351",
+          "name": "Transforms & Partial Differential Equations",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "ME4391",
+          "name": "Engineering Thermodynamics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CE4391",
+          "name": "Strength of Materials",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "ME4351",
+          "name": "Manufacturing Technology I",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME4301",
+          "name": "Fluid Mechanics & Machinery",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME4361",
+          "name": "Manufacturing Technology Lab I",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "ME4381",
+          "name": "Computer Aided Machine Drawing",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "ME4311",
+          "name": "Strength of Materials Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "MA4491",
+          "name": "Numerical Methods",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "ME4451",
+          "name": "Manufacturing Technology II",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME4492",
+          "name": "Kinematics of Machinery",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME4493",
+          "name": "Thermal Engineering I",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME4491",
+          "name": "Engineering Metallurgy",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME4494",
+          "name": "Fluid Mechanics & Machinery",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "ME4461",
+          "name": "Manufacturing Technology Lab II",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "ME4462",
+          "name": "Thermal Engineering Lab I",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "ME4593",
+          "name": "Design of Machine Elements",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME4594",
+          "name": "Dynamics of Machines",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME4595",
+          "name": "Thermal Engineering II",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME4501",
+          "name": "Metrology & Measurements",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CME4XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "ME4511",
+          "name": "Dynamics Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "ME4512",
+          "name": "Thermal Engineering Lab II",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "ME4651",
+          "name": "Design of Transmission Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME4652",
+          "name": "Finite Element Analysis",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME4691",
+          "name": "CAD / CAM",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CME4YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CME4ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "ME4681",
+          "name": "CAD / CAM Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "ME4682",
+          "name": "Design & Fabrication Project",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "ME4792",
+          "name": "Power Plant Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CME4AA",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CME4BB",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE4791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "ME4711",
+          "name": "Mini Project / Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "ME4811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "CME4CC",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "CIVIL": {
+      "SEM3": [
+        {
+          "code": "MA4351",
+          "name": "Transforms & Partial Differential Equations",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CE4391",
+          "name": "Construction Materials",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE4392",
+          "name": "Engineering Geology",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE4301",
+          "name": "Strength of Materials I",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CE4351",
+          "name": "Surveying",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE4394",
+          "name": "Fluid Mechanics",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE4311",
+          "name": "Surveying Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CE4381",
+          "name": "Strength of Materials Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "MA4491",
+          "name": "Numerical Methods",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CE4401",
+          "name": "Construction Techniques",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE4402",
+          "name": "Strength of Materials II",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE4491",
+          "name": "Soil Mechanics",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE4404",
+          "name": "Concrete Technology",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE4403",
+          "name": "Applied Hydraulic Engineering",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CE4411",
+          "name": "Hydraulic Engineering Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CE4461",
+          "name": "Soil Mechanics Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "CE4501",
+          "name": "Design of RC Elements",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CE4502",
+          "name": "Structural Analysis I",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE4591",
+          "name": "Foundation Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE4504",
+          "name": "Water Supply Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CCE4XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CE4511",
+          "name": "Concrete & Highway Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CE4513",
+          "name": "Survey Camp",
+          "credits": 1,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "CE4601",
+          "name": "Design of Steel Structures",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE4602",
+          "name": "Structural Analysis II",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE4603",
+          "name": "Highway Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CE4604",
+          "name": "Wastewater Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CCE4YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CE4611",
+          "name": "Environmental Engineering Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CE4612",
+          "name": "Quantity Surveying",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CE4701",
+          "name": "Estimation & Quantity Surveying",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CCE4AA",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CCE4BB",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE4791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "CE4711",
+          "name": "Design & Drawing Lab",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "CE4811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "CCE4CC",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "BME": {
+      "SEM2": [
+        {
+          "code": "HS4251",
+          "name": "Professional English II",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "MA4251",
+          "name": "Statistics & Numerical Methods",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "PH4254",
+          "name": "Physics for Electronics Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BE4251",
+          "name": "Basic Electrical & Electronics Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "GE4251",
+          "name": "Engineering Graphics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "BM4251",
+          "name": "Human Anatomy & Physiology",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "GE4271",
+          "name": "Engineering Practices Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "BM4271",
+          "name": "Anatomy & Physiology Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM3": [
+        {
+          "code": "MA4351",
+          "name": "Transforms & PDE",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "BM4301",
+          "name": "Biomedical Instrumentation",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BM4302",
+          "name": "Biomechanics",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC4391",
+          "name": "Digital Electronics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "BM4351",
+          "name": "Signals & Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BM4311",
+          "name": "Biomedical Instrumentation Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "EC4311",
+          "name": "Digital Electronics Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "CS4271",
+          "name": "Programming in C Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "BM4401",
+          "name": "Medical Imaging",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "BM4402",
+          "name": "Biosensors & Transducers",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BM4403",
+          "name": "Biomedical Signal Processing",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BM4451",
+          "name": "Pathology & Microbiology",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "EC4401",
+          "name": "Linear Integrated Circuits",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BM4411",
+          "name": "Medical Imaging Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "BM4481",
+          "name": "Signal Processing Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE4451",
+          "name": "Environmental Sciences",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "BM4501",
+          "name": "Biomaterials",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BM4502",
+          "name": "Hospital Management",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BM4503",
+          "name": "Rehabilitation Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BM4551",
+          "name": "Therapeutic Equipment",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CBM4XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "BM4511",
+          "name": "Biomaterials Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "BM4581",
+          "name": "Virtual Instrumentation Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "BM4601",
+          "name": "Clinical Engineering",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "BM4691",
+          "name": "Artificial Organs & Prosthetics",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CBM4YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CBM4ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CBM4WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "BM4611",
+          "name": "Clinical Engineering Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "BM4681",
+          "name": "Mini Project",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CBM4AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CBM4BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE4791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "BM4711",
+          "name": "Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "BM4811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    },
+    "MECT": {
+      "SEM3": [
+        {
+          "code": "MA4351",
+          "name": "Transforms & Partial Differential Equations",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "MT4301",
+          "name": "Sensors & Actuators",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "MT4302",
+          "name": "Electrical Machines & Drives",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "ME4391",
+          "name": "Engineering Thermodynamics",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "CE4391",
+          "name": "Strength of Materials",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "MT4311",
+          "name": "Sensors & Actuators Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "MT4381",
+          "name": "Electrical Drives Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "ME4381",
+          "name": "CAD Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM4": [
+        {
+          "code": "MT4401",
+          "name": "Control Systems",
+          "credits": 4,
+          "type": "theory"
+        },
+        {
+          "code": "MT4402",
+          "name": "Robotics",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "MT4403",
+          "name": "Embedded Systems",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "MT4404",
+          "name": "PLC & SCADA",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "MT4451",
+          "name": "Hydraulics & Pneumatics",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "MT4411",
+          "name": "Robotics Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "MT4461",
+          "name": "Embedded Systems Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "GE4451",
+          "name": "Environmental Sciences",
+          "credits": 2,
+          "type": "theory"
+        }
+      ],
+      "SEM5": [
+        {
+          "code": "MT4501",
+          "name": "Mechatronics System Design",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "MT4502",
+          "name": "CNC Machines",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "MT4503",
+          "name": "MEMS",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "MT4551",
+          "name": "Industrial IoT",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CMT4XX",
+          "name": "Professional Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXYYY",
+          "name": "Open Elective I",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "MT4511",
+          "name": "PLC & SCADA Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "MT4581",
+          "name": "CNC Lab",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM6": [
+        {
+          "code": "MT4601",
+          "name": "Machine Vision",
+          "credits": 3,
+          "type": "theory"
+        },
+        {
+          "code": "CMT4YY",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CMT4ZZ",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CMT4WW",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXZZZ",
+          "name": "Open Elective II",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "MT4611",
+          "name": "Machine Vision Lab",
+          "credits": 2,
+          "type": "lab"
+        },
+        {
+          "code": "MT4681",
+          "name": "Mini Project",
+          "credits": 2,
+          "type": "lab"
+        }
+      ],
+      "SEM7": [
+        {
+          "code": "CMT4AA",
+          "name": "Professional Elective V",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "CMT4BB",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "OXXWWW",
+          "name": "Open Elective III",
+          "credits": 3,
+          "type": "elective"
+        },
+        {
+          "code": "GE4791",
+          "name": "Human Values & Ethics",
+          "credits": 2,
+          "type": "theory"
+        },
+        {
+          "code": "MT4711",
+          "name": "Internship",
+          "credits": 3,
+          "type": "lab"
+        }
+      ],
+      "SEM8": [
+        {
+          "code": "MT4811",
+          "name": "Project Work / Dissertation",
+          "credits": 10,
+          "type": "lab"
+        },
+        {
+          "code": "OXXVVV",
+          "name": "Open Elective IV",
+          "credits": 3,
+          "type": "elective"
+        }
+      ]
+    }
+  }
+}
