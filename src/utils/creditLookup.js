@@ -1,6 +1,6 @@
-import { detectDeptFromCode, getSubjectDetails, saveOverride, saveToLearned } from './subjectLookup'
+import { detectDeptFromCode, getSubjectDetails, saveOverride, saveToLearned, getSubjectSuggestions, regulationData } from './subjectLookup'
 
-export { saveOverride, saveToLearned }
+export { saveOverride, saveToLearned, getSubjectSuggestions }
 
 /* ─── LAYER 2: Intelligent Patterns ─── */
 function detectCreditsFromPattern(code) {
@@ -32,8 +32,34 @@ export function getCreditsFromSubjectCode(code) {
     return { credits: 0, name: '', type: '', source: 'none' }
   }
 
-  const context = { regulation: 'R2021', dept: detectDeptFromCode(code) || '' }
-  const details = getSubjectDetails(code, context)
+  const regs = Object.keys(regulationData)
+  let details = { found: false }
+  
+  // Try all regulations, starting with R2021
+  const sortedRegs = ['R2021', ...regs.filter(r => r !== 'R2021')]
+  for (const reg of sortedRegs) {
+    const res = getSubjectDetails(code, { regulation: reg, dept: detectDeptFromCode(code) || '' })
+    if (res.found) {
+      details = res
+      break
+    }
+  }
+
+  // #region agent log
+  fetch('http://127.0.0.1:7727/ingest/68db56c2-efdb-46c3-95cb-9b85309482d9', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': 'b6b6fc' },
+    body: JSON.stringify({
+      sessionId: 'b6b6fc',
+      runId: 'pre-fix',
+      hypothesisId: 'H1',
+      location: 'creditLookup.js:getCreditsFromSubjectCode',
+      message: 'getSubjectDetails output for credit/name auto-fill gate',
+      data: { input: code, dept: context.dept, detailsFound: details.found, returnedKeys: Object.keys(details || {}) },
+      timestamp: Date.now(),
+    }),
+  }).catch(() => {})
+  // #endregion
 
   if (details.found) {
     // Preserve existing UI badges by mapping "non-exact" matches to "pattern".
@@ -46,18 +72,55 @@ export function getCreditsFromSubjectCode(code) {
             ? 'learned'
             : 'pattern'
 
+    // #region agent log
+    fetch('http://127.0.0.1:7727/ingest/68db56c2-efdb-46c3-95cb-9b85309482d9', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': 'b6b6fc' },
+      body: JSON.stringify({
+        sessionId: 'b6b6fc',
+        runId: 'pre-fix',
+        hypothesisId: 'H1',
+        location: 'creditLookup.js:getCreditsFromSubjectCode:branch',
+        message: 'Caller accepted getSubjectDetails as found',
+        data: { code, credits: details.credits, name: details.name, source: details.source },
+        timestamp: Date.now(),
+      }),
+    }).catch(() => {})
+    // #endregion
+
     return { credits: details.credits, name: details.name, type: details.type, source }
   }
 
   // Layer 2: Pattern-Based Detection (credits only)
+
+  // #region agent log
+  fetch('http://127.0.0.1:7727/ingest/68db56c2-efdb-46c3-95cb-9b85309482d9', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': 'b6b6fc' },
+    body: JSON.stringify({
+      sessionId: 'b6b6fc',
+      runId: 'pre-fix',
+      hypothesisId: 'H1',
+      location: 'creditLookup.js:getCreditsFromSubjectCode:fallback',
+      message: 'Caller treated getSubjectDetails as NOT found; using detectCreditsFromPattern',
+      data: { code, inferredDept: context.dept, patternCredits: detectCreditsFromPattern(code).credits, patternType: detectCreditsFromPattern(code).type },
+      timestamp: Date.now(),
+    }),
+  }).catch(() => {})
+  // #endregion
+
   return detectCreditsFromPattern(code)
 }
 
 export function getSubjectNameFromCode(code) {
   if (!code) return ''
-  const context = { regulation: 'R2021', dept: detectDeptFromCode(code) || '' }
-  const details = getSubjectDetails(code, context)
-  return details.found ? details.name : ''
+  const regs = Object.keys(regulationData)
+  const sortedRegs = ['R2021', ...regs.filter(r => r !== 'R2021')]
+  for (const reg of sortedRegs) {
+    const details = getSubjectDetails(code, { regulation: reg, dept: detectDeptFromCode(code) || '' })
+    if (details.found) return details.name
+  }
+  return ''
 }
 
 export function validateSubjectCode(code) {

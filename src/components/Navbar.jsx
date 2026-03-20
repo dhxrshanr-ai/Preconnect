@@ -2,28 +2,30 @@ export default function Navbar({ activeTab, onTabChange }) {
   const tabs = [
     { id: 'gpa', label: 'GPA', icon: '📊' },
     { id: 'cgpa', label: 'CGPA', icon: '📈' },
-    { id: 'predictor', label: 'Predictor', icon: '🎯' },
-    { id: 'analyzer', label: 'Analyzer', icon: '🔍' },
-    { id: 'history', label: 'History', icon: '📋' },
-    { id: 'grading', label: 'Grading', icon: 'ℹ️' },
+    { id: 'predictor', label: 'Target', icon: '🎯' },
+    { id: 'analyzer', label: 'Analyze', icon: '🔍' },
+    { id: 'history', label: 'Saved', icon: '📋' },
+    { id: 'grading', label: 'Info', icon: 'ℹ️' },
   ]
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" aria-label="Main Navigation">
       <div className="nav-inner">
-        <a className="nav-logo" href="#" onClick={e => { e.preventDefault(); onTabChange('gpa') }}>
-          <span className="logo-icon">⚡</span>
+        <div className="nav-brand">
           <span className="logo-text">GPAfy</span>
-        </a>
-        <div className="nav-tabs">
+        </div>
+        <div className="nav-tabs" role="tablist">
           {tabs.map(t => (
             <button
               key={t.id}
-              id={`nav-${t.id}`}
+              role="tab"
+              aria-selected={activeTab === t.id}
+              aria-controls={`panel-${t.id}`}
+              id={`tab-${t.id}`}
               className={`nav-tab ${activeTab === t.id ? 'nav-tab-active' : ''}`}
               onClick={() => onTabChange(t.id)}
             >
-              <span className="nav-tab-icon">{t.icon}</span>
+              <span className="nav-tab-icon" aria-hidden="true">{t.icon}</span>
               <span className="nav-tab-label">{t.label}</span>
             </button>
           ))}

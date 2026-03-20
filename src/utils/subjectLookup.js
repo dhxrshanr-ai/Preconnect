@@ -5,7 +5,7 @@ import { regulationData } from './regulationData'
 // regulation data and subject lookup.
 
 const DEFAULT_REGULATION = 'R2021'
-const ALLOWED_DEPTS = new Set(['ECE', 'CSE', 'IT'])
+const ALLOWED_DEPTS = new Set(['ECE', 'CSE', 'IT', 'EEE', 'MECH', 'CIVIL', 'BME', 'MECT', 'AIDS', 'CSBS', 'CSD'])
 
 const STORAGE_KEYS = {
   OVERRIDES: 'annagrade_overrides',
@@ -177,13 +177,19 @@ function applyPersistence(entry) {
   const key = normalizeCode(entry.code)
 
   if (overridesDB[key] !== undefined) {
-    return { ...entry, credits: Number(overridesDB[key]), source: 'override' }
+    return { ...entry, found: true, credits: Number(overridesDB[key]), source: 'override' }
   }
   if (learnedDB[key]) {
     const learned = learnedDB[key]
-    return { ...entry, credits: Number(learned.credits), name: learned.name || entry.name, source: 'learned' }
+    return {
+      ...entry,
+      found: true,
+      credits: Number(learned.credits),
+      name: learned.name || entry.name,
+      source: 'learned',
+    }
   }
-  return { ...entry, source: 'database' }
+  return { ...entry, found: true, source: 'database' }
 }
 
 export function getSubjectDetails(input, context = {}) {
@@ -207,7 +213,23 @@ export function getSubjectDetails(input, context = {}) {
 
   // 1) Exact code match
   if (isLikelySubjectCode(inputUpper) && index.has(inputUpper)) {
-    return applyPersistence(index.get(inputUpper))
+    const persisted = applyPersistence(index.get(inputUpper))
+    // #region agent log
+    fetch('http://127.0.0.1:7727/ingest/68db56c2-efdb-46c3-95cb-9b85309482d9', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': 'b6b6fc' },
+      body: JSON.stringify({
+        sessionId: 'b6b6fc',
+        runId: 'pre-fix',
+        hypothesisId: 'H1',
+        location: 'subjectLookup.js:getSubjectDetails:exact',
+        message: 'Exact match return payload (found expected by callers?)',
+        data: { inputUpper, returnedKeys: Object.keys(persisted), found: persisted.found, source: persisted.source },
+        timestamp: Date.now(),
+      }),
+    }).catch(() => {})
+    // #endregion
+    return persisted
   }
 
   const qLower = normalizeText(trimmed)
@@ -234,7 +256,23 @@ export function getSubjectDetails(input, context = {}) {
     const persisted = applyPersistence(best)
     // Map "non-exact match" to an estimated source for UI.
     const source = persisted.source === 'database' ? 'keyword' : persisted.source
-    return { ...persisted, source }
+    const result = { ...persisted, source }
+    // #region agent log
+    fetch('http://127.0.0.1:7727/ingest/68db56c2-efdb-46c3-95cb-9b85309482d9', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': 'b6b6fc' },
+      body: JSON.stringify({
+        sessionId: 'b6b6fc',
+        runId: 'pre-fix',
+        hypothesisId: 'H1',
+        location: 'subjectLookup.js:getSubjectDetails:keyword',
+        message: 'Keyword match return payload (found expected by callers?)',
+        data: { inputUpper: trimmed.toUpperCase(), bestCode: persisted.code, returnedKeys: Object.keys(result), found: result.found, source: result.source, bestScore },
+        timestamp: Date.now(),
+      }),
+    }).catch(() => {})
+    // #endregion
+    return result
   }
 
   // 3) Fuzzy suggestions (typo tolerant)
@@ -257,7 +295,23 @@ export function getSubjectDetails(input, context = {}) {
   if (best && bestScore >= 0.28) {
     const persisted = applyPersistence(best)
     const source = persisted.source === 'database' ? 'fuzzy' : persisted.source
-    return { ...persisted, source }
+    const result = { ...persisted, source }
+    // #region agent log
+    fetch('http://127.0.0.1:7727/ingest/68db56c2-efdb-46c3-95cb-9b85309482d9', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': 'b6b6fc' },
+      body: JSON.stringify({
+        sessionId: 'b6b6fc',
+        runId: 'pre-fix',
+        hypothesisId: 'H1',
+        location: 'subjectLookup.js:getSubjectDetails:fuzzy',
+        message: 'Fuzzy match return payload (found expected by callers?)',
+        data: { inputUpper: trimmed.toUpperCase(), bestCode: persisted.code, returnedKeys: Object.keys(result), found: result.found, source: result.source, bestScore },
+        timestamp: Date.now(),
+      }),
+    }).catch(() => {})
+    // #endregion
+    return result
   }
 
   return { found: false, reason: 'Not Found' }
@@ -268,51 +322,56 @@ export function getSubjectSuggestions(query, context = {}, limit = 5) {
   const trimmed = raw.trim()
   if (!trimmed || trimmed.length < 1) return []
 
-  const regulation = context.regulation || DEFAULT_REGULATION
+  const regulation = context.regulation
+  const regsToSearch = regulation ? [regulation] : Object.keys(regulationData)
   const dept = context.dept || detectDeptFromCode(trimmed) || ''
-
-  const index = getIndex(regulation)
   const qLower = normalizeText(trimmed)
-  const results = []
-
-  // If input already looks like a code prefix, rank by code similarity first.
   const inputUpper = normalizeCode(trimmed)
   const hasCodeLikePrefix = /^[A-Z]{1,3}\d*$/.test(inputUpper)
+  
+  const resultsMap = new Map()
 
-  for (const entry of index.values()) {
-    if (dept && entry.dept !== dept) continue
+  for (const reg of regsToSearch) {
+    const index = getIndex(reg)
+    for (const entry of index.values()) {
+      if (dept && entry.dept !== dept) continue
+      if (resultsMap.has(entry.code)) continue
 
-    let score = 0
-    let matchType = 'unknown'
+      let score = 0
+      let matchType = 'unknown'
 
-    if (hasCodeLikePrefix && entry.code.startsWith(inputUpper)) {
-      score = 0.95
-      matchType = 'code-prefix'
-    } else if (entry.code === inputUpper) {
-      score = 1
-      matchType = 'exact-code'
-    } else {
-      // Text ranking: name includes / keyword includes / fuzzy similarity.
-      const nameLower = entry.name.toLowerCase()
-      if (nameLower.includes(qLower)) {
-        score = 0.75
-        matchType = 'name'
-      } else if (entry.keywords?.some(k => k.includes(qLower))) {
-        score = 0.6
-        matchType = 'keyword'
+      if (hasCodeLikePrefix && entry.code.startsWith(inputUpper)) {
+        score = 0.95
+        matchType = 'code-prefix'
+      } else if (entry.code === inputUpper) {
+        score = 1
+        matchType = 'exact-code'
       } else {
-        const nameScore = bigramSimilarity(qLower, entry.name)
-        let keywordsScore = 0
-        for (const k of entry.keywords || []) {
-          keywordsScore = Math.max(keywordsScore, bigramSimilarity(qLower, k))
+        const nameLower = entry.name.toLowerCase()
+        if (nameLower.includes(qLower)) {
+          score = 0.75
+          matchType = 'name'
+        } else if (entry.keywords?.some(k => k.includes(qLower))) {
+          score = 0.6
+          matchType = 'keyword'
+        } else {
+          const nameScore = bigramSimilarity(qLower, entry.name)
+          let keywordsScore = 0
+          for (const k of entry.keywords || []) {
+            keywordsScore = Math.max(keywordsScore, bigramSimilarity(qLower, k))
+          }
+          score = Math.max(nameScore, keywordsScore)
+          if (score >= 0.28) matchType = 'fuzzy'
         }
-        score = Math.max(nameScore, keywordsScore)
-        if (score >= 0.28) matchType = 'fuzzy'
+      }
+
+      if (score > 0) {
+        resultsMap.set(entry.code, { ...entry, score, matchType, regulation: reg })
       }
     }
-
-    if (score > 0) results.push({ ...entry, score, matchType })
   }
+
+  const results = Array.from(resultsMap.values())
 
   results.sort((a, b) => b.score - a.score)
   return results.slice(0, limit)

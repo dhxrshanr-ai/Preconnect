@@ -56,40 +56,40 @@ export default function GradePredictor() {
 
   return (
     <div className="gpafy-page">
-      <div className="section-header">
+      <header className="section-header">
         <h2 className="section-title">Grade Predictor</h2>
-        <p className="section-desc">"If I get A+ in Maths, what will my GPA be?"</p>
-      </div>
+        <p className="section-desc">Simulate "What If" scenarios for your GPA.</p>
+      </header>
 
-      <div className="subject-card target-card">
+      <section className="subject-card target-card">
         <div className="card-header">
           <span className="card-index">⚡ Simulation Dashboard</span>
         </div>
         <div className="predictor-comparison">
           <div className="s-stat">
-            <span className="s-lbl">Current GPA</span>
+            <span className="s-lbl">Current</span>
             <span className="s-val">{currentGPA > 0 ? currentGPA.toFixed(2) : '—'}</span>
           </div>
           <div className="predictor-arrow">→</div>
           <div className={`s-stat ${delta > 0 ? 'text-teal' : delta < 0 ? 'text-error' : ''}`}>
-            <span className="s-lbl">Predicted GPA</span>
+            <span className="s-lbl">Predicted</span>
             <span className="s-val">{predictedGPA > 0 ? predictedGPA.toFixed(2) : '—'}</span>
           </div>
           <div className={`s-stat ${delta > 0 ? 'text-teal' : delta < 0 ? 'text-error' : ''}`}>
-            <span className="s-lbl">Change</span>
+            <span className="s-lbl">Impact</span>
             <span className="s-val">
               {currentGPA > 0 && predictedGPA > 0 ? (delta >= 0 ? '+' : '') + delta.toFixed(2) : '—'}
             </span>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="subject-container">
+      <section className="subject-container">
         {subjects.map((sub, i) => (
           <div className="subject-card" key={sub.id}>
              <div className="card-header">
                <span className="card-index">Subject {i + 1}</span>
-               {sub.credits && <span className="status-badge badge-default">{sub.credits} CREDITS</span>}
+               {sub.credits && <span className="status-badge badge-default">{sub.credits} Credits</span>}
              </div>
              <div className="card-body">
                <div className="card-row">
@@ -100,12 +100,14 @@ export default function GradePredictor() {
                      className="input"
                      value={sub.name}
                      onChange={e => update(i, 'name', e.target.value)}
+                     spellCheck="false"
                    />
                  </div>
                  <div className="input-group flex-1">
                    <label className="input-label">Credits</label>
                    <input
                      type="number"
+                     inputMode="numeric"
                      className="input credits-input-modern"
                      value={sub.credits}
                      onChange={e => update(i, 'credits', e.target.value)}
@@ -126,12 +128,12 @@ export default function GradePredictor() {
              </div>
           </div>
         ))}
-      </div>
+      </section>
 
-      <div className="calc-actions" style={{ marginBottom: '40px' }}>
-        <button className="btn btn-primary-modern" onClick={addSubject}>+ Add Entry</button>
-        <button className="btn btn-outline-modern" onClick={loadFromCalculator}>📥 Sync from GPA</button>
-        <button className="btn btn-outline-modern" onClick={() => setSubjects(DEFAULT_SUBS())}>Reset</button>
+      <div className="calc-actions">
+        <button className="btn-outline-modern" onClick={addSubject}>+ Add Entry</button>
+        <button className="btn-outline-modern" onClick={loadFromCalculator}>📥 Sync GPA</button>
+        <button className="btn-outline-modern" onClick={() => setSubjects(DEFAULT_SUBS())}>Reset</button>
       </div>
     </div>
   )

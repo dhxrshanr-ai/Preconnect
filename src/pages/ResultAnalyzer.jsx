@@ -83,94 +83,73 @@ export default function ResultAnalyzer() {
   const totalCredits = subjects.reduce((a, s) => a + (Number(s.credits) || 0), 0)
 
   return (
-    <div className="analyzer-page">
-      <div className="section-header">
+    <div className="gpafy-page">
+      <header className="section-header">
         <h2 className="section-title">Result Analyzer</h2>
-        <p className="section-desc">Enter marks → auto-detect grades, GPA, and arrears</p>
-      </div>
+        <p className="section-desc">Auto-detect grades and GPA from marks.</p>
+      </header>
 
       <RegulationSelector onLoad={handleTemplateLoad} />
 
-      <div className="analyzer-grid">
+      <section className="subject-container">
         {subjects.map((sub, i) => {
           const isFail = sub.grade === 'U'
-          const isPass = sub.grade && sub.grade !== 'U'
           return (
-            <div className={`analyzer-row ${isFail ? 'analyzer-row-fail' : ''}`} key={sub.id}>
-              <div className="analyzer-row-num">{i + 1}</div>
-              <div className="analyzer-row-fields">
-                {sub.code && <span className="analyzer-code-badge">{sub.code}</span>}
-                <input
-                  type="text"
-                  className="input analyzer-name-input"
-                  placeholder="Subject name"
-                  value={sub.name}
-                  onChange={e => updateField(i, 'name', e.target.value)}
-                />
-                <input
-                  type="number"
-                  className="input credits-input"
-                  placeholder="Cr"
-                  min="1" max="10"
-                  value={sub.credits}
-                  onChange={e => updateField(i, 'credits', e.target.value)}
-                />
-                <input
-                  type="number"
-                  className="input analyzer-marks-input"
-                  placeholder="Marks"
-                  min="0" max="100"
-                  value={sub.marks}
-                  onChange={e => updateMarks(i, e.target.value)}
-                />
-                <div className="analyzer-result-cell">
-                  {sub.grade ? (
-                    <span className={`grade-badge gb-${sub.grade.replace('+', 'p')}`}>{sub.grade}</span>
-                  ) : (
-                    <span className="analyzer-pending">—</span>
-                  )}
-                </div>
-                <div className="analyzer-status-cell">
-                  {isPass && <span className="analyzer-pass">✅ Pass</span>}
-                  {isFail && <span className="analyzer-fail">❌ Fail</span>}
+            <div className={`subject-card ${isFail ? 'card-fail' : ''}`} key={sub.id}>
+              <div className="card-header">
+                <span className="card-index">Subject {i + 1}</span>
+                <div className="card-header-right">
+                  {sub.grade && <span className={`status-badge ${isFail ? 'badge-default' : 'badge-verified'}`}>{sub.grade}</span>}
+                  <button className="btn-close" onClick={() => removeSubject(i)}>✕</button>
                 </div>
               </div>
-              <button className="btn-icon btn-remove" onClick={() => removeSubject(i)} title="Remove">✕</button>
+              <div className="card-body">
+                <div className="card-row">
+                  <div className="input-group flex-2">
+                    <label className="input-label">Name / Code</label>
+                    <input
+                      type="text"
+                      className="input"
+                      placeholder="e.g. Mathematics"
+                      value={sub.name || sub.code || ''}
+                      onChange={e => updateField(i, 'name', e.target.value)}
+                    />
+                  </div>
+                  <div className="input-group flex-1">
+                    <label className="input-label">Marks</label>
+                    <input
+                      type="number"
+                      inputMode="numeric"
+                      className="input"
+                      placeholder="0-100"
+                      value={sub.marks}
+                      onChange={e => updateMarks(i, e.target.value)}
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           )
         })}
-      </div>
+      </section>
 
-      <div className="action-bar">
-        <button className="btn btn-primary" onClick={addSubject}>+ Add Subject</button>
-        <button className="btn btn-outline" onClick={resetAll}>Reset All</button>
-        <span className="action-info">{filledCount}/{subjects.length} analyzed · {totalCredits} credits</span>
+      <div className="calc-actions">
+        <button className="btn-outline-modern" onClick={addSubject}>+ Add Entry</button>
+        <button className="btn-outline-modern" onClick={resetAll}>Reset All</button>
       </div>
 
       {filledCount > 0 && (
-        <div className={`result-card ${arrears > 0 ? '' : 'tier-s'}`}>
-          <div className="result-header">
-            <span className="result-emoji">{arrears > 0 ? '⚠️' : '🎉'}</span>
-            <div className="result-gpa">{gpa.toFixed(2)}</div>
-            <div className="result-label">Calculated GPA</div>
-          </div>
-
-          {arrears > 0 && (
-            <div className="result-alert result-alert-fail">
-              🔴 {arrears} Arrear{arrears > 1 ? 's' : ''} detected — Re-appearance required
+        <footer className="sticky-results">
+          <div className="sticky-results-inner">
+            <div className="result-main">
+              <span className="result-value">{gpa.toFixed(2)}</span>
+              <span className="result-tag">Predicted GPA</span>
             </div>
-          )}
-          {arrears === 0 && (
-            <div className="result-alert result-alert-pass">✅ All subjects passed!</div>
-          )}
-
-          <div className="result-stats">
-            <div className="stat"><span className="stat-val">{filledCount}</span><span className="stat-lbl">Analyzed</span></div>
-            <div className="stat"><span className="stat-val">{passCount}</span><span className="stat-lbl">Passed</span></div>
-            <div className="stat"><span className="stat-val">{arrears}</span><span className="stat-lbl">Arrears</span></div>
-            <div className="stat"><span className="stat-val">{totalCredits}</span><span className="stat-lbl">Credits</span></div>
+            <div className="result-stats-mini">
+               <span className="s-lbl">{arrears} Arrears</span>
+            </div>
           </div>
-        </div>
+        </footer>
       )}
     </div>
   )

@@ -62,8 +62,8 @@ export default function Calculator() {
     const avgGradeNeeded = (requiredPoints / remainingCredits).toFixed(2)
     
     if (avgGradeNeeded > 10) targetMessage = "Impossible! 😱 Target too high."
-    else if (avgGradeNeeded <= 0) targetMessage = "Already achieved! 🎉"
-    else targetMessage = `Avg Grade needed: ${avgGradeNeeded} per credit`
+    else if (avgGradeNeeded <= 0) targetMessage = "Goal Reached! 🎉"
+    else targetMessage = `Avg Grade needed: ${avgGradeNeeded}`
   }
 
   const handleSave = () => {
@@ -74,7 +74,7 @@ export default function Calculator() {
       gpa: currentGPAValue,
       credits: totalCr,
       subjects: filledCount,
-      label: 'GPAfy Session'
+      label: 'GPA Session'
     })
     saveData('gpa_history', history)
     setSaved(true)
@@ -82,21 +82,22 @@ export default function Calculator() {
 
   return (
     <div className="gpafy-page">
-      <div className="section-header">
-        <h2 className="section-title">GPAfy</h2>
-        <p className="section-desc">India's Smartest GPA Calculator for Anna University</p>
-      </div>
+      <header className="section-header">
+        <h2 className="section-title">GPA Calculator</h2>
+        <p className="section-desc">Fast, accurate, and mobile-ready calculation.</p>
+      </header>
 
-      {/* Target GPA Feature */}
-      <div className="subject-card target-card">
+      {/* Target GPA Section */}
+      <section className="subject-card target-card">
         <div className="card-header">
-          <span className="card-index">🎯 Target GPA Calculator</span>
+          <span className="card-index">🎯 Target Goal</span>
         </div>
         <div className="card-row">
           <div className="input-group flex-1">
             <label className="input-label">I want to get...</label>
             <input 
               type="number" 
+              inputMode="decimal"
               className="input" 
               placeholder="e.g. 8.5"
               value={targetGPA}
@@ -105,12 +106,12 @@ export default function Calculator() {
             />
           </div>
           <div className="target-result flex-2">
-            <span className="target-msg">{targetMessage || "Enter target to see what grades you need"}</span>
+            <span className="target-msg">{targetMessage || "Enter goal to see required grades"}</span>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="subject-container">
+      <section className="subject-container">
         {subjects.map((sub, i) => (
           <SubjectRow
             key={sub.id}
@@ -121,48 +122,37 @@ export default function Calculator() {
             onRemove={removeSubject}
           />
         ))}
-      </div>
+      </section>
 
-      <button className="fab-add" onClick={addSubject} title="Add Subject">
+      {/* Add Subject FAB */}
+      <button className="fab-add" onClick={addSubject} aria-label="Add Subject">
         <span className="fab-icon">+</span>
       </button>
 
       <div className="calc-actions">
-        <button className="btn btn-outline-modern" onClick={resetAll}>Reset All</button>
+        <button className="btn-outline-modern" onClick={resetAll}>Reset Fields</button>
         <div className="calc-stats-inline">
-          <span>{filledCount} subjects filled</span>
-          <span>•</span>
-          <span>{totalCr} total credits</span>
+          <span>{filledCount} Subjects Filled</span>
         </div>
       </div>
 
-      <div className="sticky-results">
+      {/* Sticky Bottom Result Bar */}
+      <footer className="sticky-results">
         <div className="sticky-results-inner">
           <div className="result-main">
             <span className="result-value">{currentGPAValue.toFixed(2)}</span>
             <span className="result-tag">Current GPA</span>
           </div>
           
-          <div className="sticky-stats">
-            <div className="s-stat">
-              <span className="s-val">{totalCr}</span>
-              <span className="s-lbl">Credits</span>
-            </div>
-            <div className="s-stat">
-              <span className="s-val">{arrears}</span>
-              <span className="s-lbl">Arrears</span>
-            </div>
-          </div>
-
           <button 
             className={`btn-save-modern ${saved ? 'saved' : ''}`}
             onClick={handleSave}
             disabled={filledCount === 0 || saved}
           >
-            {saved ? '✓ Saved' : 'Save Result'}
+            {saved ? '✓ Saved' : 'Save GPA'}
           </button>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }

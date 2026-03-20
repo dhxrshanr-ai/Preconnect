@@ -93,6 +93,7 @@ export const ECE = {
       { code: 'EC3461', name: 'Linear Integrated Circuits Lab', credits: 2, type: 'lab' },
       { code: 'EC3481', name: 'Communication Systems Lab', credits: 2, type: 'lab' },
       { code: 'GE3451', name: 'Environmental Sciences & Sustainability', credits: 2, type: 'theory' },
+      { code: 'MX3411', name: 'Naan Mudhalvan: Technical Skill Training', credits: 2, type: 'lab' },
     ],
     5: [
       { code: 'EC3551', name: 'Transmission Lines & RF Systems', credits: 3, type: 'theory' },

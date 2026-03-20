@@ -33,6 +33,7 @@ export const EEE = {
       { code: 'EE3404', name: 'Power System Analysis', credits: 3, type: 'theory' },
       { code: 'EE3411', name: 'Electrical Machines Lab II', credits: 2, type: 'lab' },
       { code: 'EE3461', name: 'Linear & Digital ICs Lab', credits: 2, type: 'lab' },
+      { code: 'MX3411', name: 'Naan Mudhalvan: Technical Skills', credits: 2, type: 'lab' },
     ],
     5: [
       { code: 'EE3501', name: 'Power Electronics', credits: 4, type: 'theory' },
@@ -94,6 +95,7 @@ export const MECH = {
       { code: 'ME3494', name: 'Fluid Mechanics & Machinery', credits: 4, type: 'theory' },
       { code: 'ME3461', name: 'Manufacturing Technology Lab II', credits: 2, type: 'lab' },
       { code: 'ME3462', name: 'Thermal Engineering Lab I', credits: 2, type: 'lab' },
+      { code: 'MX3411', name: 'Naan Mudhalvan: Technical Skills', credits: 2, type: 'lab' },
     ],
     5: [
       { code: 'ME3593', name: 'Design of Machine Elements', credits: 3, type: 'theory' },

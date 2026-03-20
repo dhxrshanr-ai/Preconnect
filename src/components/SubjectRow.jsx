@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { getCreditsFromSubjectCode, getSubjectNameFromCode, validateSubjectCode, saveOverride, saveToLearned } from '../utils/creditLookup'
-import { findSuggestions } from '../utils/suggestionEngine'
+import { getCreditsFromSubjectCode, getSubjectNameFromCode, validateSubjectCode, saveOverride, saveToLearned, getSubjectSuggestions } from '../utils/creditLookup'
 import { GRADES } from '../utils/gradePoints'
 
 export default function SubjectRow({ subject, index, subjects, onChange, onRemove }) {
@@ -43,8 +42,7 @@ export default function SubjectRow({ subject, index, subjects, onChange, onRemov
     const up = val.toUpperCase()
     onChange(index, 'code', up)
     
-    // Fetch suggestions
-    const hints = findSuggestions(val)
+    const hints = getSubjectSuggestions(val)
     setSuggestions(hints)
     setShowSuggestions(hints.length > 0)
   }
@@ -61,10 +59,8 @@ export default function SubjectRow({ subject, index, subjects, onChange, onRemov
     onChange(index, 'credits', val)
     onChange(index, 'isManualCredit', true)
     
-    // Layer 3: Save as user override
     if (subject.code) {
       saveOverride(subject.code, num)
-      // Layer 4: If it's a new subject name too, save to learned
       if (subject.name) {
         saveToLearned(subject.code, num, subject.name)
       }
@@ -81,11 +77,8 @@ export default function SubjectRow({ subject, index, subjects, onChange, onRemov
   const validation = validateSubjectCode(subject.code)
   const isFail = subject.grade === 'U'
   const detectedName = subject.code ? getSubjectNameFromCode(subject.code) : ''
-
-  // Duplicate Check
   const isDuplicate = subjects?.some((s, i) => i !== index && s.code && s.code === subject.code)
 
-  /* Status Badge Config */
   const getStatusBadge = () => {
     switch (creditInfo.source) {
       case 'database': return { label: 'VERIFIED', class: 'badge-verified' }
@@ -102,13 +95,14 @@ export default function SubjectRow({ subject, index, subjects, onChange, onRemov
     <div className={`subject-card ${isFail ? 'card-fail' : ''}`}>
       <div className="card-header">
         <span className="card-index">Subject {index + 1}</span>
-        {badge && <span className={`status-badge ${badge.class}`}>{badge.label}</span>}
-        <button className="btn-close" onClick={() => onRemove(index)} title="Remove">✕</button>
+        <div className="card-header-right">
+          {badge && <span className={`status-badge ${badge.class}`}>{badge.label}</span>}
+          <button className="btn-close" onClick={() => onRemove(index)} title="Remove" aria-label="Remove subject">✕</button>
+        </div>
       </div>
 
       <div className="card-body">
         <div className="card-row">
-          {/* Code Input */}
           <div className="input-group flex-2">
             <label className="input-label">Subject Code</label>
             <input
@@ -120,6 +114,8 @@ export default function SubjectRow({ subject, index, subjects, onChange, onRemov
               onChange={e => handleCodeChange(e.target.value)}
               onFocus={() => { if (suggestions.length) setShowSuggestions(true) }}
               autoComplete="off"
+              autoCapitalize="characters"
+              spellCheck="false"
             />
             {showSuggestions && (
               <div className="suggestion-menu" ref={suggestRef}>
@@ -127,20 +123,20 @@ export default function SubjectRow({ subject, index, subjects, onChange, onRemov
                   <div key={i} className="suggestion-item" onClick={() => selectSuggestion(s)}>
                     <span className="sug-code">{s.code}</span>
                     <span className="sug-name">{s.name}</span>
-                    <span className="sug-cr">({s.credits} CR)</span>
+                    <span className="sug-cr">({s.credits} Credits)</span>
                   </div>
                 ))}
               </div>
             )}
           </div>
 
-          {/* Credits Input */}
           <div className="input-group flex-1">
             <label className="input-label">Credits</label>
             <input
               type="number"
+              inputMode="numeric"
               className={`input credits-input-modern ${subject.isManualCredit ? 'credits-manual' : ''}`}
-              placeholder="Cr"
+              placeholder="Credits"
               value={subject.credits || ''}
               onChange={e => handleCreditsChange(e.target.value)}
               min="0" max="15"
@@ -149,19 +145,18 @@ export default function SubjectRow({ subject, index, subjects, onChange, onRemov
         </div>
 
         <div className="card-row">
-          {/* Name Input */}
           <div className="input-group flex-3">
-            <label className="input-label">Subject Name (Optional)</label>
+            <label className="input-label">Subject Name</label>
             <input
               type="text"
               className="input name-input-modern"
-              placeholder={detectedName || "Enter name..."}
+              placeholder={detectedName || "Optional Subject Name"}
               value={subject.name || ''}
               onChange={e => handleNameChange(e.target.value)}
+              spellCheck="false"
             />
           </div>
 
-          {/* Grade Dropdown */}
           <div className="input-group flex-2">
             <label className="input-label">Grade</label>
             <select
@@ -169,7 +164,7 @@ export default function SubjectRow({ subject, index, subjects, onChange, onRemov
               value={subject.grade || ''}
               onChange={e => onChange(index, 'grade', e.target.value)}
             >
-              <option value="">Select</option>
+              <option value="">Grade</option>
               {GRADES.map(g => (
                 <option key={g.grade} value={g.grade}>{g.grade}</option>
               ))}
@@ -177,15 +172,11 @@ export default function SubjectRow({ subject, index, subjects, onChange, onRemov
           </div>
         </div>
 
-        {/* Dynamic Alerts */}
         {subject.code && !validation.valid && subject.code.length >= 3 && (
           <div className="card-alert alert-warn">⚠ {validation.message}</div>
         )}
         {isDuplicate && (
           <div className="card-alert alert-warn">⚠ Duplicate subject detected!</div>
-        )}
-        {creditInfo.source === 'default' && subject.code && (
-          <div className="card-alert alert-info">ℹ Credits auto-assigned. Please verify.</div>
         )}
       </div>
     </div>
