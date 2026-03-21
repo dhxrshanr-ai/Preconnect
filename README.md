@@ -1,92 +1,36 @@
-# ![GPAfy Elite Logo](https://raw.githubusercontent.com/lucide-react/lucide/main/icons/graduation-cap.svg) GPAfy Elite
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-> **The Advanced Academic Engine for Anna University Students**
+## Getting Started
 
-GPAfy Elite is a premium, mobile-first GPA management ecosystem designed to empower students with real-time academic tracking, predictive analytics, and a sophisticated executive dashboard. Built with a modern tech stack, it provides a seamless experience for managing semester-wise performance, arrears, and target GPA goals.
+First, run the development server:
 
----
-
-## ✨ Key Features
-
-- **🎯 Precision Calculators**: Highly accurate GPA and CGPA calculators supporting Anna University R2017, R2021, and R2025 regulations.
-- **📊 Analytics Dashboard**: Visual insights into your academic journey with interactive charts and consistency mapping.
-- **🏆 Executive Overview**: High-level standing reports including global ranking (Top 5%), consistency scores, and "Elite" honor roll status.
-- **🧭 Target Engine**: Set academic goals and dynamically calculate the required performance to achieve your dream GPA.
-- **🛠️ Arrear Management**: A dedicated dashboard to track and resolve backlogs effortlessly.
-- **📱 Mobile-First Experience**: Fluid navigation, glassmorphic UI, and optimized touch interactions.
-- **📥 Bulk Import**: Effortlessly import large sets of subject data for quick setup.
-
----
-
-## 🚀 Tech Stack
-
-GPAfy Elite is engineered using cutting-edge web technologies:
-
-- **Frontend**: [React 18](https://reactjs.org/) with [TypeScript](https://www.typescriptlang.org/)
-- **Build Tool**: [Vite 6](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/) with Glassmorphism
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **State Management**: [Zustand](https://github.com/pmndrs/zustand)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Visualization**: [Recharts](https://recharts.org/)
-
----
-
-## 🛠️ Getting Started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (Latest LTS recommended)
-- [npm](https://www.npmjs.com/) or [pnpm](https://pnpm.io/)
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/dhxrshanr-ai/Preconnect.git
-   cd Preconnect
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Launch the development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Build for production:
-   ```bash
-   npm run build
-   ```
-
----
-
-## 📂 Project Structure
-
-```text
-GPAfy/
-├── src/
-│   ├── components/      # UI Components (Calculator, Analytics, Common)
-│   ├── store/           # Zustand State Management (useGPAStore)
-│   ├── styles/          # Global styles and Tailwind configuration
-│   ├── App.tsx          # Main Application Entry
-│   └── main.tsx         # Root Render
-├── public/              # Static assets
-├── index.html           # Entry HTML
-└── vite.config.ts       # Vite configuration
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🛡️ License
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project is private and intended for academic tracking excellence.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
----
+## Learn More
 
-<p align="center">
-  Developed with ❤️ for students who aim higher.
-</p>
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

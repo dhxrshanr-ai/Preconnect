@@ -1,42 +1,28 @@
-export type GradingScale = '4.0' | '5.0' | '10.0';
+export type SubjectCategory = 'theory' | 'lab' | 'project' | 'elective_pe' | 'elective_oe' | 'mandatory' | 'internship';
 
-export interface Grade {
-  label: string;
-  points: number;
-}
-
-export interface Subject {
-  id: string;
+export type Subject = {
   code: string;
   name: string;
   credits: number;
-  gradeValue: number; // The points on the current scale
-  gradeLabel: string;
-  isProjected?: boolean;
-}
+  type: SubjectCategory;
+  isProvisional?: boolean;
+  electiveGroupId?: string;
+  isNccCourse?: boolean;
+  options?: Subject[];
+  selectedOption?: Subject;
+};
 
-export interface Semester {
-  id: string;
-  name: string;
+export type Semester = {
+  sem: number;
   subjects: Subject[];
-  gpa: number;
-}
+};
 
-export interface GPAState {
+export type Department = {
+  dept: string;
   semesters: Semester[];
-  gradingScale: GradingScale;
-  targetGPA: number | null;
-  
-  // Actions
-  addSemester: (name: string) => void;
-  removeSemester: (id: string) => void;
-  addSubject: (semesterId: string, subject: Omit<Subject, 'id'>) => void;
-  updateSubject: (semesterId: string, subjectId: string, updates: Partial<Subject>) => void;
-  removeSubject: (semesterId: string, subjectId: string) => void;
-  setGradingScale: (scale: GradingScale) => void;
-  setTargetGPA: (target: number | null) => void;
-  
-  // Calculations
-  calculateGPA: (semesterId: string) => number;
-  calculateCGPA: () => number;
-}
+};
+
+export type Regulation = {
+  reg: 'R2013' | 'R2017' | 'R2021' | 'R2025';
+  departments: Department[];
+};
