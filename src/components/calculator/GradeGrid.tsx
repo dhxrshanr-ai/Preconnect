@@ -1,17 +1,13 @@
+import { Regulation, REGULATION_GRADES } from '@/data/regulations';
+
 interface GradeGridProps {
   selectedGrade: string;
   onSelectGrade: (grade: string) => void;
-  gradingScale: '4.0' | '5.0' | '10.0';
+  regulation: Regulation;
 }
 
-const GradeGrid = ({ selectedGrade, onSelectGrade, gradingScale }: GradeGridProps) => {
-  const grades = {
-    "10.0": ["O", "A+", "A", "B+", "B", "C", "D", "F"],
-    "4.0": ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "F"],
-    "5.0": ["A", "B", "C", "D", "F"],
-  };
-
-  const currentGrades = grades[gradingScale];
+const GradeGrid = ({ selectedGrade, onSelectGrade, regulation }: GradeGridProps) => {
+  const currentGrades = Object.keys(REGULATION_GRADES[regulation]);
 
   return (
     <div className="grid grid-cols-4 gap-2">

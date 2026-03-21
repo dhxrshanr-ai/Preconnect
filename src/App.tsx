@@ -10,8 +10,7 @@ import {
   Plus,
   BookOpen,
   Trophy,
-  X,
-  Check
+  X
 } from 'lucide-react';
 import { GlassCard } from './components/common/GlassCard';
 import { useGPAStore } from './store/useGPAStore';
@@ -22,6 +21,9 @@ import BottomSheet from './components/common/BottomSheet';
 import { SubjectEntryForm } from './components/calculator/SubjectEntryForm';
 import FAB from './components/common/FAB';
 import BottomNav from './components/common/BottomNav';
+import { RegulationSelector } from './components/calculator/RegulationSelector';
+import { ArrearDashboard } from './components/calculator/ArrearDashboard';
+import { InsightsPanel } from './components/analytics/InsightsPanel';
 
 type Tab = 'gpa' | 'cgpa' | 'target' | 'analytics';
 
@@ -29,7 +31,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<Tab>('gpa');
   const [showSettings, setShowSettings] = useState(false);
   const [isAddingSubject, setIsAddingSubject] = useState(false);
-  const { semesters, addSemester, calculateCGPA, gradingScale, setGradingScale } = useGPAStore();
+  const { semesters, addSemester, calculateCGPA, regulation } = useGPAStore();
 
   const tabs = [
     { id: 'gpa', label: 'GPA', icon: Calculator },
@@ -70,27 +72,8 @@ export default function App() {
               </div>
 
               <div className="space-y-6">
-                 <div>
-                   <label className="block text-xs font-black text-white/30 uppercase tracking-[0.2em] mb-4">Grading Scale</label>
-                   <div className="grid grid-cols-1 gap-3">
-                      {(['4.0', '5.0', '10.0'] as const).map((scale) => (
-                        <button
-                          key={scale}
-                          onClick={() => { setGradingScale(scale); setShowSettings(false); }}
-                          className={`flex items-center justify-between px-6 py-4 rounded-2xl border transition-all ${
-                            gradingScale === scale 
-                              ? 'bg-primary border-primary shadow-lg shadow-primary/20 text-white' 
-                              : 'bg-white/5 border-white/10 text-white/40 hover:border-white/20'
-                          }`}
-                        >
-                          <span className="font-bold text-lg">{scale} Point Scale</span>
-                          {gradingScale === scale && <Check size={20} />}
-                        </button>
-                      ))}
-                   </div>
-                 </div>
                  <div className="pt-4 text-xs text-white/20 text-center font-medium">
-                   Changes to grading scale will affect all active calculations.
+                    Academic Regulation is now managed via the selector in the header.
                  </div>
               </div>
             </motion.div>
@@ -123,10 +106,7 @@ export default function App() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <div className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md">
-              <span className="text-[10px] font-black text-white/30 uppercase tracking-widest">Scale:</span>
-              <span className="text-xs font-black text-primary">{gradingScale}</span>
-            </div>
+            <RegulationSelector />
             <button 
               onClick={() => setShowSettings(true)}
               className="p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all active:scale-90"
@@ -170,17 +150,17 @@ export default function App() {
                   </div>
                   <div className="flex items-baseline gap-2">
                     <span className="text-5xl font-black text-white tracking-tighter">{cgpa}</span>
-                    <span className="text-xs font-bold text-white/50">/ {gradingScale}</span>
+                    <span className="text-xs font-bold text-white/50">/ {regulation}</span>
                   </div>
                   <div className="pt-2">
                     <div className="flex justify-between text-[10px] font-bold text-white/50 uppercase mb-2">
                        <span>Efficiency</span>
-                       <span>{((cgpa / Number(gradingScale)) * 100).toFixed(0)}%</span>
+                       <span>{((cgpa / 10) * 100).toFixed(0)}%</span>
                     </div>
                     <div className="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
                       <motion.div 
                         initial={{ width: 0 }}
-                        animate={{ width: `${(cgpa / Number(gradingScale)) * 100}%` }}
+                        animate={{ width: `${(cgpa / 10) * 100}%` }}
                         className="h-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)]" 
                         transition={{ duration: 1.5, ease: "easeOut" }}
                       />
@@ -223,6 +203,7 @@ export default function App() {
                     </section>
 
                     <div className="space-y-12">
+                      <ArrearDashboard />
                       {semesters.map((semester) => (
                         <SemesterSection 
                           key={semester.id} 
@@ -234,7 +215,16 @@ export default function App() {
                   </div>
                 )}
                 
-                {activeTab === 'analytics' && <AnalyticsDashboard />}
+                {activeTab === 'analytics' && (
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div className="lg:col-span-2">
+                      <AnalyticsDashboard />
+                    </div>
+                    <div>
+                      <InsightsPanel />
+                    </div>
+                  </div>
+                )}
                 
                 {activeTab === 'target' && <TargetGPACalculator />}
 

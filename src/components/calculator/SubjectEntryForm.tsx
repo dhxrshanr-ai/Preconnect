@@ -5,7 +5,7 @@ import { COMMON_SUBJECTS } from "@/data/common-courses";
 import GradeGrid from "./GradeGrid";
 
 export const SubjectEntryForm = ({ onSuccess }: { onSuccess?: () => void }) => {
-  const { addSubject, gradingScale } = useGPAStore();
+  const { addSubject, regulation } = useGPAStore();
   
   const [formData, setFormData] = useState({
     code: "",
@@ -160,7 +160,7 @@ export const SubjectEntryForm = ({ onSuccess }: { onSuccess?: () => void }) => {
         <GradeGrid
           selectedGrade={formData.grade}
           onSelectGrade={(grade) => setFormData({ ...formData, grade })}
-          gradingScale={gradingScale}
+          regulation={regulation}
         />
       </div>
 

@@ -11,7 +11,7 @@ interface SubjectRowProps {
 }
 
 export const SubjectRow: React.FC<SubjectRowProps> = ({ semesterId, subject }) => {
-  const { removeSubject, gradingScale } = useGPAStore();
+  const { removeSubject } = useGPAStore();
   const controls = useAnimation();
 
   const handleDragEnd = async (_: any, info: PanInfo) => {
@@ -25,7 +25,7 @@ export const SubjectRow: React.FC<SubjectRowProps> = ({ semesterId, subject }) =
     }
   };
 
-  const maxPoints = Number(gradingScale);
+  const maxPoints = 10;
   const progressPercent = (subject.gradeValue / maxPoints) * 100;
 
   return (

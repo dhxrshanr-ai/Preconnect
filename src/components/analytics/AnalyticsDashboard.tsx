@@ -16,7 +16,7 @@ import { GlassCard } from '../common/GlassCard';
 import { TrendingUp, PieChart as PieIcon } from 'lucide-react';
 
 export const AnalyticsDashboard: React.FC = () => {
-  const { semesters, gradingScale, calculateGPA } = useGPAStore();
+  const { semesters, calculateGPA } = useGPAStore();
 
   const data = semesters
     .filter(s => s.subjects.length > 0)
@@ -75,7 +75,7 @@ export const AnalyticsDashboard: React.FC = () => {
                   axisLine={false}
                 />
                 <YAxis 
-                  domain={[0, Number(gradingScale)]} 
+                  domain={[0, 10]} 
                   stroke="#ffffff40" 
                   fontSize={10} 
                   tickLine={false}

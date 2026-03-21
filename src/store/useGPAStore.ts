@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
+import { Regulation, REGULATION_GRADES } from '../data/regulations';
 
 // Types
 export interface Subject {
@@ -8,12 +9,22 @@ export interface Subject {
   name: string;
   credits: number;
   grade: string;
-  gradePoints: number; // For new component
-  gradeLabel: string;  // For old component compatibility
-  gradeValue: number;  // For old component compatibility
+  gradePoints: number;
+  gradeLabel: string;
+  gradeValue: number;
   semesterId: string;
   category?: string;
   isProjected?: boolean;
+}
+
+export interface Arrear {
+  id: string;
+  code: string;
+  name: string;
+  credits: number;
+  attempts: number;
+  status: 'pending' | 'cleared';
+  targetGrade?: string;
 }
 
 export interface Semester {
@@ -25,68 +36,60 @@ export interface Semester {
   isActive: boolean;
 }
 
+export interface AcademicInsight {
+  type: 'eligibility' | 'warning' | 'info' | 'achievement';
+  message: string;
+  isPositive: boolean;
+}
+
 export interface GPAState {
   // State
   semesters: Semester[];
+  arrears: Arrear[];
   activeSemesterId: string | null;
-  targetGPA: number | null; // Changed to allow null
-  gradingScale: '4.0' | '5.0' | '10.0';
+  targetGPA: number | null;
+  regulation: Regulation;
   
   // Computed
   cumulativeGPA: number;
   totalCredits: number;
   
   // Actions
-  addSemester: (name: string) => void; // Updated signature to match App.tsx
+  addSemester: (name: string) => void;
   removeSemester: (id: string) => void;
   setActiveSemester: (id: string) => void;
+  setRegulation: (regulation: Regulation) => void;
   
-  // Mixed support for addSubject
   addSubject: (subject: Omit<Subject, 'id' | 'gradePoints' | 'gradeLabel' | 'gradeValue'>) => void;
   updateSubject: (id: string, updates: Partial<Subject>) => void;
-  removeSubject: (semesterId: string, subjectId: string) => void; // Updated signature to match SubjectRow.tsx
+  removeSubject: (semesterId: string, subjectId: string) => void;
+  
+  addArrear: (arrear: Omit<Arrear, 'id' | 'attempts' | 'status'>) => void;
+  updateArrear: (id: string, updates: Partial<Arrear>) => void;
+  removeArrear: (id: string) => void;
+  clearArrear: (id: string, grade: string) => void;
   
   setTargetGPA: (target: number | null) => void;
-  setGradingScale: (scale: '4.0' | '5.0' | '10.0') => void;
   
-  // Expected by App.tsx and other components
   calculateGPA: (semesterId: string) => number;
   calculateCGPA: () => number;
+  getInsights: () => AcademicInsight[];
   
-  // Internal helper (kept for consistency with prompt)
+  // Internal helpers
   _calculateGPAFromSubjects: (subjects: Subject[]) => number;
   calculateCumulativeGPA: () => number;
-  
-  // Utility
   reset: () => void;
 }
-
-// Grade to points conversion
-const gradeToPoints = (grade: string, scale: '4.0' | '5.0' | '10.0'): number => {
-  const gradeMap: Record<string, Record<string, number>> = {
-    '10.0': {
-      'O': 10, 'A+': 10, 'A': 9, 'B+': 8, 'B': 7, 'C': 6, 'D': 5, 'F': 0,
-    },
-    '4.0': {
-      'A+': 4.0, 'A': 4.0, 'A-': 3.7, 'B+': 3.3, 'B': 3.0, 'B-': 2.7,
-      'C+': 2.3, 'C': 2.0, 'C-': 1.7, 'D+': 1.3, 'D': 1.0, 'F': 0,
-    },
-    '5.0': {
-      'A': 5.0, 'B': 4.0, 'C': 3.0, 'D': 2.0, 'F': 0,
-    },
-  };
-  
-  return gradeMap[scale][grade.toUpperCase()] || 0;
-};
 
 // Initial state
 const initialState = {
   semesters: [
     { id: '1', name: 'Semester 1', subjects: [], gpa: 0, totalCredits: 0, isActive: true }
   ],
+  arrears: [],
   activeSemesterId: '1',
   targetGPA: 8.0,
-  gradingScale: '10.0' as const,
+  regulation: 'R2021' as Regulation,
   cumulativeGPA: 0,
   totalCredits: 0,
 };
@@ -96,6 +99,26 @@ export const useGPAStore = create<GPAState>()(
   persist(
     (set, get) => ({
       ...initialState,
+
+      setRegulation: (regulation) => {
+        set({ regulation });
+        // Recalculate all GPAs based on new regulation grade points
+        set((state) => {
+          const semesters = state.semesters.map((semester) => {
+            const subjects = semester.subjects.map((subject) => {
+              const gradePoints = REGULATION_GRADES[regulation][subject.grade.toUpperCase()] || 0;
+              return {
+                ...subject,
+                gradePoints,
+                gradeValue: gradePoints,
+              };
+            });
+            const gpa = get()._calculateGPAFromSubjects(subjects);
+            return { ...semester, subjects, gpa };
+          });
+          return { semesters, cumulativeGPA: get().calculateCumulativeGPA() };
+        });
+      },
 
       addSemester: (name) => {
         const id = `semester-${Date.now()}`;
@@ -128,11 +151,11 @@ export const useGPAStore = create<GPAState>()(
       },
 
       addSubject: (subject) => {
-        const { activeSemesterId, gradingScale } = get();
+        const { activeSemesterId, regulation } = get();
         if (!activeSemesterId) return;
 
         const id = `subject-${Date.now()}`;
-        const gradePoints = gradeToPoints(subject.grade, gradingScale);
+        const gradePoints = REGULATION_GRADES[regulation][subject.grade.toUpperCase()] || 0;
         
         const newSubject: Subject = {
           ...subject,
@@ -148,21 +171,34 @@ export const useGPAStore = create<GPAState>()(
               const subjects = [...semester.subjects, newSubject];
               const gpa = get()._calculateGPAFromSubjects(subjects);
               const totalCredits = subjects.reduce((sum, s) => sum + s.credits, 0);
-              
               return { ...semester, subjects, gpa, totalCredits };
             }
             return semester;
           });
 
+          // Automatically add to arrears if grade is F or U
+          const isFailing = ['F', 'U', 'RA'].includes(subject.grade.toUpperCase());
+          const arrears = isFailing 
+            ? [...state.arrears, {
+                id: `arrear-${Date.now()}`,
+                code: subject.code,
+                name: subject.name,
+                credits: subject.credits,
+                attempts: 1,
+                status: 'pending' as const
+              }]
+            : state.arrears;
+
           return {
             semesters,
+            arrears,
             cumulativeGPA: get().calculateCumulativeGPA(),
           };
         });
       },
 
       updateSubject: (id, updates) => {
-        const { gradingScale } = get();
+        const { regulation } = get();
         
         set((state) => {
           const semesters = state.semesters.map((semester) => {
@@ -170,9 +206,10 @@ export const useGPAStore = create<GPAState>()(
               if (subject.id === id) {
                 const updatedSubject = { ...subject, ...updates };
                 if (updates.grade) {
-                  updatedSubject.gradePoints = gradeToPoints(updates.grade, gradingScale);
+                  const gradePoints = REGULATION_GRADES[regulation][updates.grade.toUpperCase()] || 0;
+                  updatedSubject.gradePoints = gradePoints;
                   updatedSubject.gradeLabel = updates.grade;
-                  updatedSubject.gradeValue = updatedSubject.gradePoints;
+                  updatedSubject.gradeValue = gradePoints;
                 }
                 return updatedSubject;
               }
@@ -181,7 +218,6 @@ export const useGPAStore = create<GPAState>()(
 
             const gpa = get()._calculateGPAFromSubjects(subjects);
             const totalCredits = subjects.reduce((sum, s) => sum + s.credits, 0);
-            
             return { ...semester, subjects, gpa, totalCredits };
           });
 
@@ -211,12 +247,50 @@ export const useGPAStore = create<GPAState>()(
         });
       },
 
-      setTargetGPA: (target) => {
-        set({ targetGPA: target });
+      addArrear: (arrear) => {
+        const id = `arrear-${Date.now()}`;
+        const newArrear: Arrear = {
+          ...arrear,
+          id,
+          attempts: 1,
+          status: 'pending',
+        };
+        set((state) => ({ arrears: [...state.arrears, newArrear] }));
       },
 
-      setGradingScale: (scale) => {
-        set({ gradingScale: scale });
+      updateArrear: (id, updates) => {
+        set((state) => ({
+          arrears: state.arrears.map((a) => a.id === id ? { ...a, ...updates } : a),
+        }));
+      },
+
+      removeArrear: (id) => {
+        set((state) => ({ arrears: state.arrears.filter((a) => a.id !== id) }));
+      },
+
+      clearArrear: (id, grade) => {
+        const arrear = get().arrears.find(a => a.id === id);
+        if (!arrear) return;
+
+        // Optionally add it to current active semester
+        const { activeSemesterId } = get();
+        if (activeSemesterId) {
+          get().addSubject({
+            code: arrear.code,
+            name: arrear.name,
+            credits: arrear.credits,
+            grade: grade,
+            semesterId: activeSemesterId,
+          });
+        }
+
+        set((state) => ({
+          arrears: state.arrears.filter((a) => a.id !== id),
+        }));
+      },
+
+      setTargetGPA: (target) => {
+        set({ targetGPA: target });
       },
 
       _calculateGPAFromSubjects: (subjects) => {
@@ -260,13 +334,66 @@ export const useGPAStore = create<GPAState>()(
         return totalCredits > 0 ? Number((totalPoints / totalCredits).toFixed(2)) : 0;
       },
 
+      getInsights: () => {
+        const { cumulativeGPA, arrears } = get();
+        const insights: AcademicInsight[] = [];
+
+        const pendingArrearsCount = arrears.length;
+
+        if (pendingArrearsCount === 0 && cumulativeGPA >= 6.5) {
+          insights.push({
+            type: 'eligibility',
+            message: 'Eligible for placement (No arrears, CGPA ≥ 6.5)',
+            isPositive: true,
+          });
+        } else if (pendingArrearsCount > 0) {
+          insights.push({
+            type: 'warning',
+            message: `Not placement eligible: ${pendingArrearsCount} pending arrear(s)`,
+            isPositive: false,
+          });
+        } else if (cumulativeGPA < 6.5) {
+          insights.push({
+            type: 'warning',
+            message: 'Boost CGPA to 6.5+ for placement eligibility',
+            isPositive: false,
+          });
+        }
+
+        if (cumulativeGPA >= 8.5) {
+          insights.push({
+            type: 'achievement',
+            message: "Outstanding! You're on track for Distinction (8.5+)",
+            isPositive: true,
+          });
+        } else if (cumulativeGPA >= 7.5) {
+          insights.push({
+            type: 'eligibility',
+            message: 'Eligible for Higher Studies (CGPA ≥ 7.5)',
+            isPositive: true,
+          });
+        }
+
+        return insights;
+      },
+
       reset: () => {
         set(initialState);
       },
     }),
     {
       name: 'gpa-calculator-storage',
-      version: 1,
+      version: 2,
+      migrate: (persistedState: any, version: number) => {
+        if (version === 1) {
+          return {
+            ...persistedState,
+            regulation: 'R2021',
+            arrears: [],
+          };
+        }
+        return persistedState;
+      },
     }
   )
 );

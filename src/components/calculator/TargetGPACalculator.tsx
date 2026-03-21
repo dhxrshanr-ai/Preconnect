@@ -4,7 +4,7 @@ import { useGPAStore } from '../../store/useGPAStore';
 import { GlassCard } from '../common/GlassCard';
 
 export const TargetGPACalculator: React.FC = () => {
-  const { calculateCGPA, semesters, gradingScale } = useGPAStore();
+  const { calculateCGPA, semesters } = useGPAStore();
   const currentCGPA = calculateCGPA();
   const totalCredits = semesters.flatMap(s => s.subjects).reduce((acc, s) => acc + s.credits, 0);
   
@@ -29,7 +29,7 @@ export const TargetGPACalculator: React.FC = () => {
   };
 
   const status = calculateRequiredGPA();
-  const maxGPA = Number(gradingScale);
+  const maxGPA = 10;
 
   const getFeasibility = (val: number) => {
     if (val <= maxGPA * 0.75) return { label: 'Realistic', color: 'text-green-400', bg: 'bg-green-400/10' };
