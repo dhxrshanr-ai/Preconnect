@@ -4,7 +4,7 @@ import { calculateSGPA } from '@/lib/gpa';
 import { useGpaStore } from '@/store/useGpaStore';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, Filter, ChevronRight, RotateCcw, ChevronDown } from 'lucide-react';
+import { Plus, RotateCcw, ChevronDown } from 'lucide-react';
 import { ElectivePicker } from './ElectivePicker';
 import { cn } from '@/lib/utils';
 
@@ -60,20 +60,6 @@ export function SemesterSection({
     return acc + s.credits;
   }, 0);
   
-  const isComplete = combinedSubjects
-    .filter(s => {
-      const isOpt = !!s.options;
-      const actualCredits = isOpt ? (getSelection(semNumber, s.code) ? s.options!.find((opt: Subject) => opt.code === getSelection(semNumber, s.code))?.credits || s.credits : s.credits) : s.credits;
-      const actualType = isOpt ? (getSelection(semNumber, s.code) ? s.options!.find((opt: Subject) => opt.code === getSelection(semNumber, s.code))?.type || s.type : s.type) : s.type;
-      return actualCredits > 0 && actualType !== 'mandatory';
-    })
-    .every(s => {
-      if (s.options) {
-        const pickedCode = getSelection(semNumber, s.code);
-        return pickedCode ? !!getGrade(semNumber, pickedCode) : false;
-      }
-      return !!getGrade(semNumber, s.code);
-    });
 
   const rows: React.ReactNode[] = [];
 
@@ -85,7 +71,7 @@ export function SemesterSection({
   };
 
   combinedSubjects.forEach((s, index) => {
-    const isExtra = currentExtraSubjects.some((ext: any) => ext.code === s.code);
+    const isExtra = currentExtraSubjects.some((ext: Subject) => ext.code === s.code);
     const isLastTwo = index >= combinedSubjects.length - 2;
 
     if (s.options) {

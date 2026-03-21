@@ -4,6 +4,7 @@ import { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { regulationsData, getSubjects } from '@/data';
+import { Subject } from '@/types';
 import { useGpaStore } from '@/store/useGpaStore';
 import { SemesterSection } from '@/components/SemesterSection';
 import { CgpaChart } from '@/components/CgpaChart';
@@ -15,7 +16,6 @@ import { SemesterDropdown } from '@/components/SemesterDropdown';
 import { DepartmentDropdown } from '@/components/DepartmentDropdown';
 import { RegulationDropdown } from '@/components/RegulationDropdown';
 import { ModeDropdown } from '@/components/ModeDropdown';
-import { ChevronDown } from 'lucide-react';
 
 const REG_LABELS: Record<string, string> = {
   'R2013': 'Admitted 2013–16',
@@ -46,7 +46,7 @@ function CalculatorContent() {
     if (queryReg && queryReg !== regulation) setRegulation(queryReg);
     if (queryDept && queryDept !== department) setDepartment(queryDept);
     if (queryMode && queryMode !== mode) setMode(queryMode as 'sgpa' | 'cgpa');
-  }, [queryReg, queryDept, queryMode]);
+  }, [queryReg, queryDept, queryMode, regulation, department, mode, setRegulation, setDepartment, setMode]);
 
   // Hide calculation on change
   const stateHash = JSON.stringify({
@@ -84,7 +84,7 @@ function CalculatorContent() {
       const semInputs = combined.map(sub => {
          if (sub.options) {
             const pickedCode = selections[regulation]?.[department]?.[s]?.[sub.code];
-            const pickedSubject = pickedCode ? sub.options.find((opt: any) => opt.code === pickedCode) : null;
+             const pickedSubject = pickedCode ? sub.options.find((opt: Subject) => opt.code === pickedCode) : null;
             return {
               credits: pickedSubject ? pickedSubject.credits : sub.credits,
               type: pickedSubject ? pickedSubject.type : sub.type,
