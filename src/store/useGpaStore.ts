@@ -153,10 +153,10 @@ export const useGpaStore = create<GpaStore>()((set, get) => ({
    
    getMasterSubjects: (reg) => {
      if (reg === 'R2021') {
-       return Object.values(MASTER_R2021_SUBJECTS).map((s: any) => ({ ...s, type: 'theory' })) as Subject[];
+       return Object.values(MASTER_R2021_SUBJECTS).map((s) => ({ ...(s as Subject), type: 'theory' })) as Subject[];
      }
      if (reg === 'R2025') {
-       return Object.values(MASTER_R2025_SUBJECTS || {}).map((s: any) => ({ ...s, type: 'theory' })) as Subject[];
+       return Object.values(MASTER_R2025_SUBJECTS || {}).map((s) => ({ ...(s as Subject), type: 'theory' })) as Subject[];
      }
      return [];
    },

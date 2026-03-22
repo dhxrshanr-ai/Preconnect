@@ -10,14 +10,12 @@ import { cn } from '@/lib/utils';
 
 export function SemesterSection({ 
   semNumber, 
-  subjects, 
   isOpen, 
   onToggle,
   showSgpa = true,
   variant = 'accordion'
 }: { 
   semNumber: number; 
-  subjects: Subject[]; 
   isOpen: boolean; 
   onToggle: () => void;
   showSgpa?: boolean;
@@ -83,14 +81,6 @@ export function SemesterSection({
   });
   
   const sgpa = calculateSGPA(semesterInputs);
-  const totalCredits = combinedSubjects.reduce((acc, s) => {
-    if (s.options) {
-      const pickedCode = getSelection(semNumber, s.code);
-      const pickedSubject = pickedCode ? s.options.find((opt: Subject) => opt.code === pickedCode) : null;
-      return acc + (pickedSubject ? pickedSubject.credits : 0);
-    }
-    return acc + s.credits;
-  }, 0);
   
 
   const rows: React.ReactNode[] = [];

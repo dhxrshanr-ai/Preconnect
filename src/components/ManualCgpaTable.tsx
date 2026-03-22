@@ -107,7 +107,7 @@ export function ManualCgpaTable() {
             <div className="flex items-start gap-4 p-5 rounded-2xl bg-primary/5 border border-primary/10">
                 <Star className="text-primary mt-1 shrink-0" size={18} />
                 <p className="text-[11px] font-space-grotesque font-bold text-white/50 leading-relaxed uppercase tracking-wider">
-                    Pro-tip: You can use the <span className="text-primary">GPA Mode</span> above to calculate individual semester SGPAs if you don't know them yet.
+                    Pro-tip: You can use the <span className="text-primary">GPA Mode</span> above to calculate individual semester SGPAs if you don&apos;t know them yet.
                 </p>
             </div>
         </div>

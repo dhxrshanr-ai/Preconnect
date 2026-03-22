@@ -10,8 +10,6 @@ import { SemesterSection } from '@/components/SemesterSection';
 import { CgpaChart } from '@/components/CgpaChart';
 import { calculateSGPA } from '@/lib/gpa';
 import { StickyResultBar } from '@/components/StickyResultBar';
-import { cn } from '@/lib/utils';
-import { ShareCard } from '@/components/ShareCard';
 import { SemesterDropdown } from '@/components/SemesterDropdown';
 import { DepartmentDropdown } from '@/components/DepartmentDropdown';
 import { RegulationDropdown } from '@/components/RegulationDropdown';
@@ -263,7 +261,6 @@ function CalculatorContent() {
                >
                  <SemesterSection 
                    semNumber={activeSem}
-                   subjects={getSubjects(regulation, department, activeSem)}
                    isOpen={true}
                    showSgpa={isCalculated}
                    onToggle={() => {}}
