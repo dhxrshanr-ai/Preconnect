@@ -29,7 +29,7 @@ export function SubjectRow({ subject, grade, onGradeChange, onElectiveChange, is
           </div>
           <div>
             <p className="text-[10px] font-space-grotesque font-black text-primary uppercase tracking-[0.3em] text-glow-orange">Choice Slot</p>
-            <p className="text-sm font-outfit font-black text-white/60 group-hover:text-white transition-colors tracking-tight">Select {subject.name}</p>
+            <p className="text-sm font-outfit font-medium text-white/60 group-hover:text-white transition-colors tracking-tight">Select {subject.name}</p>
           </div>
         </div>
         <ChevronRight size={20} className="text-primary/40 group-hover:text-primary group-hover:translate-x-2 transition-transform" />
