@@ -48,6 +48,10 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        'space-grotesque': ['var(--font-space-grotesque)', 'sans-serif'],
+        'outfit': ['var(--font-outfit)', 'sans-serif'],
+      },
     },
   },
   plugins: [],

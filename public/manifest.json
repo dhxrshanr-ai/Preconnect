@@ -1,0 +1,10 @@
+{
+  "name": "GPAfy",
+  "short_name": "GPAfy",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#FF5500",
+  "description": "Anna University GPA & CGPA Calculator with Precision Grade Tracking.",
+  "icons": []
+}
