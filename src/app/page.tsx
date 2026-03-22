@@ -16,6 +16,7 @@ import { SemesterDropdown } from '@/components/SemesterDropdown';
 import { DepartmentDropdown } from '@/components/DepartmentDropdown';
 import { RegulationDropdown } from '@/components/RegulationDropdown';
 import { ModeDropdown } from '@/components/ModeDropdown';
+import { ManualCgpaTable } from '@/components/ManualCgpaTable';
 
 const REG_LABELS: Record<string, string> = {
   'R2013': 'Admitted 2013–16',
@@ -32,14 +33,15 @@ function CalculatorContent() {
   const queryDept = searchParams.get('dept');
   const queryMode = searchParams.get('mode');
 
-  const { regulation, setRegulation, department, setDepartment, getGrade, grades, selections, extraSubjects } = useGpaStore();
+  const { 
+    regulation, setRegulation, department, setDepartment, getGrade, grades, selections, 
+    extraSubjects, manualSemData, cgpaSemesterCount, subjectCounts, getSelection, 
+    getMasterSubjects, getElectivePools 
+  } = useGpaStore();
 
   const [mode, setMode] = useState<'sgpa' | 'cgpa'>((queryMode as 'sgpa' | 'cgpa') || 'cgpa');
   const [activeSem, setActiveSem] = useState<number>(1);
-  const [hydrated, setHydrated] = useState(false);
   const [isCalculated, setIsCalculated] = useState(false);
-
-  useEffect(() => { setHydrated(true); }, []);
 
   // Sync initial URL if exists
   useEffect(() => {
@@ -52,7 +54,8 @@ function CalculatorContent() {
   const stateHash = JSON.stringify({
     g: grades[regulation]?.[department],
     s: selections[regulation]?.[department],
-    e: extraSubjects[regulation]?.[department]
+    e: extraSubjects[regulation]?.[department],
+    c: cgpaSemesterCount[regulation]?.[department]
   });
 
   useEffect(() => {
@@ -77,14 +80,53 @@ function CalculatorContent() {
   
   // Calculate Global CGPA Graph Data
   const chartData = [1,2,3,4,5,6,7,8].map(s => {
+      if (mode === 'cgpa') {
+        const data = manualSemData[regulation]?.[department]?.[s] || { sgpa: '', credits: '' };
+        const sgpa = parseFloat(data.sgpa) || 0;
+        const totalCredits = parseInt(data.credits) || 0;
+        const semCount = cgpaSemesterCount[regulation]?.[department] || 1;
+        const isRelevant = s <= semCount;
+        return { 
+          sem: s, 
+          sgpa: isRelevant ? sgpa : 0, 
+          cgpa: 0, 
+          totalCredits: isRelevant ? totalCredits : 0 
+        };
+      }
+
+      const currentSubjectCount = subjectCounts[regulation]?.[department]?.[s] || 0;
+      
+      const manualSlots = Array.from({ length: currentSubjectCount }, (_, i) => {
+        const slotCode = `SLOT_${s}_${i + 1}`;
+        const selectedCode = getSelection(s, slotCode);
+        
+        if (selectedCode) {
+          const allSubjects = [
+            ...getMasterSubjects(regulation),
+            ...getElectivePools(regulation)
+          ];
+          const found = allSubjects.find(sub => sub.code === selectedCode);
+          if (found) return { ...found, slotCode } as Subject;
+        }
+
+        return {
+          code: slotCode,
+          name: `Subject ${i + 1}`,
+          credits: 3,
+          type: 'theory',
+          isPlaceholder: true,
+          options: []
+        } as Subject;
+      });
+
       const subs = getSubjects(regulation, department, s);
       const extraList = extraSubjects[regulation]?.[department]?.[s] || [];
-      const combined = [...subs, ...extraList];
+      const combined = [...(currentSubjectCount > 0 ? manualSlots : subs), ...extraList];
 
       const semInputs = combined.map(sub => {
          if (sub.options) {
             const pickedCode = selections[regulation]?.[department]?.[s]?.[sub.code];
-             const pickedSubject = pickedCode ? sub.options.find((opt: Subject) => opt.code === pickedCode) : null;
+            const pickedSubject = pickedCode ? sub.options.find((opt: Subject) => opt.code === pickedCode) : null;
             return {
               credits: pickedSubject ? pickedSubject.credits : sub.credits,
               type: pickedSubject ? pickedSubject.type : sub.type,
@@ -113,7 +155,6 @@ function CalculatorContent() {
   const finalCgpa = runningCredits > 0 ? (runningPoints / runningCredits).toFixed(2) : '0.00';
   const activeSgpa = chartData.find(c => c.sem === activeSem)?.sgpa || 0;
 
-  if (!hydrated) return null; // Avoid hydration mismatch on Zustand localstorage
 
   return (
     <div className="flex flex-col gap-10 max-w-2xl mx-auto pb-24 px-4 relative">
@@ -206,31 +247,30 @@ function CalculatorContent() {
         transition={{ duration: 0.8, delay: 0.3 }}
       >
          <h2 className="text-[10px] font-space-grotesque font-black text-white/60 uppercase tracking-[0.4em] mb-8 px-8 text-glow-white">
-            Grade Data Entry
+            {mode === 'cgpa' ? 'Cumulative Data Input' : `Semester ${activeSem} Data Entry`}
          </h2>
          
          <div className="flex flex-col gap-6">
            <AnimatePresence mode="popLayout">
-             {[1, 2, 3, 4, 5, 6, 7, 8].map(sem => (
-                <motion.div 
-                  key={sem} 
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  className={cn(mode === 'sgpa' && activeSem !== sem ? "hidden" : "block")}
-                >
-                   <SemesterSection 
-                     semNumber={sem}
-                     subjects={getSubjects(regulation, department, sem)}
-                     isOpen={mode === 'sgpa' || activeSem === sem}
-                     showSgpa={isCalculated}
-                     onToggle={() => {
-                        if (mode === 'sgpa') setActiveSem(sem);
-                        else setActiveSem(activeSem === sem ? 0 : sem);
-                     }}
-                   />
-                </motion.div>
-             ))}
+             {mode === 'cgpa' ? (
+                <ManualCgpaTable />
+             ) : (
+               <motion.div
+                 key={`standalone-${activeSem}`}
+                 initial={{ opacity: 0, x: 20 }}
+                 animate={{ opacity: 1, x: 0 }}
+                 exit={{ opacity: 0, x: -20 }}
+               >
+                 <SemesterSection 
+                   semNumber={activeSem}
+                   subjects={getSubjects(regulation, department, activeSem)}
+                   isOpen={true}
+                   showSgpa={isCalculated}
+                   onToggle={() => {}}
+                   variant="standalone"
+                 />
+               </motion.div>
+             )}
            </AnimatePresence>
          </div>
 
@@ -276,7 +316,7 @@ function CalculatorContent() {
             className="mt-12"
           >
              <h2 className="text-[10px] font-space-grotesque font-black text-primary uppercase tracking-[0.4em] mb-8 px-8 text-glow-orange">
-                Final result trajectory
+                Final result
              </h2>
              
              {mode === 'cgpa' ? (
@@ -290,13 +330,10 @@ function CalculatorContent() {
                        initial={{ scale: 0.5, opacity: 0 }}
                        animate={{ scale: 1, opacity: 1 }}
                        transition={{ type: "spring", stiffness: 200, damping: 15, delay: 0.2 }}
-                       className="text-9xl font-space-grotesque font-black tracking-tighter leading-none text-glow-white"
+                       className="text-7xl sm:text-9xl font-space-grotesque font-black tracking-tighter leading-none text-glow-white"
                      >
                        {finalCgpa}
                      </motion.h1>
-                   </div>
-                   <div className="w-full z-10">
-                      <ShareCard cgpa={finalCgpa} />
                    </div>
                  </div>
                  <div className="glass-panel p-8 rounded-[3rem] depth-tilt">
@@ -312,13 +349,10 @@ function CalculatorContent() {
                      initial={{ scale: 0.5, opacity: 0 }}
                      animate={{ scale: 1, opacity: 1 }}
                      transition={{ type: "spring", stiffness: 200, damping: 15, delay: 0.2 }}
-                     className="text-9xl font-space-grotesque font-black tracking-tighter leading-none text-glow-white"
+                     className="text-7xl sm:text-9xl font-space-grotesque font-black tracking-tighter leading-none text-glow-white"
                    >
                      {activeSgpa.toFixed(2)}
                    </motion.h1>
-                 </div>
-                 <div className="w-full z-10">
-                   <ShareCard cgpa={activeSgpa.toFixed(2)} />
                  </div>
                </div>
              )}

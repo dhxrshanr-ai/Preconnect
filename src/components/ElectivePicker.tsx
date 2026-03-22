@@ -16,13 +16,13 @@ export function ElectivePicker({
   onClose,
   options,
   onSelect,
-  groupLabel
+  title
 }: {
   isOpen: boolean;
   onClose: () => void;
   options: Subject[];
   onSelect: (sub: Subject) => void;
-  groupLabel: string;
+  title: string;
 }) {
   const { selections, regulation, department } = useGpaStore();
   const [searchQuery, setSearchQuery] = useState('');
@@ -43,16 +43,16 @@ export function ElectivePicker({
   const masterRegistry = regulation === 'R2021' ? MASTER_R2021_SUBJECTS : 
                          regulation === 'R2025' ? MASTER_R2025_SUBJECTS : {};
 
-  // Determine which consolidated pool to use based on the group label or context
+  // Determine which consolidated pool to use based on the title or context
   let consolidatedPool: Subject[] = [];
   if (regulation === 'R2021') {
-    if (groupLabel.toLowerCase().includes('open elective')) {
+    if (title.toLowerCase().includes('open elective')) {
       consolidatedPool = ALL_OPEN_ELECTIVES;
-    } else if (groupLabel.toLowerCase().includes('professional elective')) {
+    } else if (title.toLowerCase().includes('professional elective')) {
       consolidatedPool = ALL_PROFESSIONAL_ELECTIVES.map(s => ({ ...s, type: 'elective_pe' as const }));
-    } else if (groupLabel.toLowerCase().includes('mandatory')) {
+    } else if (title.toLowerCase().includes('mandatory')) {
       consolidatedPool = ALL_MANDATORY_COURSES;
-    } else if (groupLabel.toLowerCase().includes('additional')) {
+    } else if (title.toLowerCase().includes('additional')) {
       consolidatedPool = [
         ...ALL_PROFESSIONAL_ELECTIVES.map(s => ({ ...s, type: 'elective_pe' as const })),
         ...ALL_OPEN_ELECTIVES
@@ -77,8 +77,14 @@ export function ElectivePicker({
   const showCustomOption = searchQuery.trim().length > 0 && !exactMatchExists;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center bg-black/80 backdrop-blur-xl animate-in fade-in duration-500 p-4">
-      <div className="glass-panel bg-[#050505] w-full max-w-xl rounded-[2.5rem] shadow-[0_0_100px_rgba(255,85,0,0.15)] overflow-hidden animate-float transition-weightless flex flex-col max-h-[85vh] border-primary/30 depth-tilt">
+    <div 
+      className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center bg-black/80 backdrop-blur-xl animate-in fade-in duration-500 p-4"
+      onClick={onClose}
+    >
+      <div 
+        className="glass-panel bg-[#050505] w-full max-w-xl rounded-[2.5rem] shadow-[0_0_100px_rgba(255,85,0,0.15)] overflow-hidden animate-float transition-weightless flex flex-col max-h-[85vh] border-primary/30 depth-tilt"
+        onClick={(e) => e.stopPropagation()}
+      >
         
         {/* Header Section */}
         <div className="p-8 pb-6 border-b border-white/5 relative shrink-0">
@@ -86,9 +92,9 @@ export function ElectivePicker({
           <div className="flex items-center justify-between mb-8 relative z-10">
             <h3 className="font-space-grotesque font-black text-2xl text-white tracking-tighter flex items-center gap-4 text-glow-orange">
               <div className="w-10 h-10 rounded-full border-2 border-primary flex items-center justify-center shadow-[0_0_15px_rgba(255,85,0,0.5)] text-xs">
-                {groupLabel.substring(0,2).toUpperCase()}
+                {title.substring(0,2).toUpperCase()}
               </div>
-              {groupLabel} Sector
+              {title}
             </h3>
             <button 
               onClick={onClose} 
