@@ -42,14 +42,12 @@ export default function RootLayout({
         inter.variable,
         syne.variable
       )}>
-        {/* Light Background elements */}
-        <div className="fixed inset-0 z-[-1] pointer-events-none overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,#d1fae5_0%,#F7F4F0_70%)] opacity-70" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,#fff0e8_0%,transparent_60%)] opacity-60" />
-          <div className="stars-container absolute inset-0 opacity-40" />
+        {/* Background — fixed, promoted to GPU layer */}
+        <div className="fixed inset-0 z-[-1] pointer-events-none" style={{ willChange: 'transform', transform: 'translateZ(0)' }}>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,#d1fae5_0%,#F7F4F0_65%)] opacity-60" />
         </div>
 
-        <header className="sticky top-0 z-50 w-full transition-all duration-500 bg-white/80 backdrop-blur-xl border-b border-gray-200/80 shadow-sm">
+        <header className="sticky top-0 z-50 w-full bg-white/90 border-b border-gray-200/80 shadow-sm" style={{ backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)' }}>
           <div className="max-w-4xl mx-auto">
             <div className="py-5 px-6 flex items-center justify-between">
               <div className="flex items-center gap-4">
