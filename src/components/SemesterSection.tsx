@@ -230,7 +230,7 @@ export function SemesterSection({
             {rows.map((row, i) => (
               <div
                 key={(row as React.ReactElement).key}
-                className="relative"
+                className="relative focus-within:z-[70]"
                 style={{ zIndex: 50 - i }}
               >
                 {row}
