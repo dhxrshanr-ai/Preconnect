@@ -71,15 +71,15 @@ export function GradeDropdown({ value, onChange, id = 'default', onOpenChange }:
           }
         }}
         className={cn(
-          "h-12 w-24 sm:w-28 px-3 rounded-2xl border-2 text-center font-space-grotesque font-black text-sm tracking-widest uppercase outline-none transition-all duration-200",
+          "h-12 w-24 sm:w-28 px-3 rounded-2xl border-2 text-center font-space-grotesque font-black text-sm tracking-widest uppercase outline-none transition-all duration-300",
           isEmpty && !isFocused
-            ? "bg-gray-50 border-gray-200 text-gray-400 placeholder:text-gray-300"
+            ? "bg-gray-50 border-gray-200 text-gray-400 hover:border-emerald-300 hover:text-emerald-500 placeholder:text-gray-300 shadow-inner"
             : isFocused && !isValid && hasContent
-            ? "bg-red-50 border-red-300 text-red-500 ring-2 ring-red-100"
+            ? "bg-rose-50 border-rose-400 text-rose-500 ring-4 ring-rose-50"
             : isFocused
-            ? "bg-emerald-50 border-primary text-gray-800 ring-2 ring-primary/15"
+            ? "bg-emerald-50 border-emerald-500 text-gray-900 ring-4 ring-emerald-50 scale-[1.03] shadow-lg shadow-emerald-500/10"
             : isValid
-            ? "bg-primary border-primary text-white shadow-[0_4px_15px_rgba(5,150,105,0.25)]"
+            ? "bg-emerald-600 border-emerald-600 text-white shadow-[0_8px_20px_rgba(5,150,105,0.3)]"
             : "bg-gray-50 border-gray-200 text-gray-400"
         )}
       />
