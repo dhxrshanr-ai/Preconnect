@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Calculator, LayoutList, BookOpen } from 'lucide-react';
 
 interface WelcomeDashboardProps {
   onSelect: (mode: 'sgpa' | 'cgpa' | 'syllabus') => void;
@@ -26,20 +25,14 @@ export function WelcomeDashboard({ onSelect }: WelcomeDashboardProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <DashboardCard 
           title="GPA Calculator"
-          description="Calculate your current semester GPA with our interactive point-and-click elective picker."
-          icon={<Calculator className="w-8 h-8 text-primary" />}
           onClick={() => onSelect('sgpa')}
         />
         <DashboardCard 
           title="CGPA Calculator"
-          description="Track your cumulative academic progress across multiple semesters with beautifully rendered charts."
-          icon={<LayoutList className="w-8 h-8 text-emerald-500" />}
           onClick={() => onSelect('cgpa')}
         />
         <DashboardCard 
           title="Syllabus Explorer"
-          description="Browse detailed 5-unit syllabus break-downs for your regulation, department, and subjects."
-          icon={<BookOpen className="w-8 h-8 text-teal-500" />}
           onClick={() => onSelect('syllabus')}
         />
       </div>
@@ -47,21 +40,17 @@ export function WelcomeDashboard({ onSelect }: WelcomeDashboardProps) {
   );
 }
 
-function DashboardCard({ title, description, icon, onClick }: { title: string, description: string, icon: React.ReactNode, onClick: () => void }) {
+function DashboardCard({ title, onClick }: { title: string, onClick: () => void }) {
   return (
     <motion.button
       whileHover={{ y: -5, scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       onClick={onClick}
-      className="glass-panel p-8 rounded-[2.5rem] flex flex-col items-start gap-6 text-left relative overflow-hidden group transition-all duration-300 hover:border-primary/40 hover:shadow-[0_8px_40px_rgba(16,185,129,0.15)] bg-white/40"
+      className="glass-panel p-8 rounded-[2.5rem] flex flex-col items-center justify-center text-center relative overflow-hidden group transition-all duration-300 hover:border-primary/40 hover:shadow-[0_8px_40px_rgba(16,185,129,0.15)] bg-white/40 h-full min-h-[140px]"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-100/50 shadow-inner group-hover:scale-110 transition-transform duration-500 relative z-10">
-        {icon}
-      </div>
-      <div className="relative z-10">
-        <h3 className="text-xl font-space-grotesque font-bold text-gray-900 mb-2 tracking-tight">{title}</h3>
-        <p className="text-sm text-gray-500 leading-relaxed font-medium">{description}</p>
+      <div className="relative z-10 w-full flex items-center justify-center">
+        <h3 className="text-xl sm:text-2xl font-space-grotesque font-bold text-gray-900 tracking-tight">{title}</h3>
       </div>
     </motion.button>
   );
