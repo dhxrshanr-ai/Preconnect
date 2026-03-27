@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, Suspense } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { regulationsData, getSubjects } from '@/data';
 import { Subject } from '@/types';
@@ -13,8 +12,10 @@ import { StickyResultBar } from '@/components/StickyResultBar';
 import { SemesterDropdown } from '@/components/SemesterDropdown';
 import { DepartmentDropdown } from '@/components/DepartmentDropdown';
 import { RegulationDropdown } from '@/components/RegulationDropdown';
-import { ModeDropdown } from '@/components/ModeDropdown';
 import { ManualCgpaTable } from '@/components/ManualCgpaTable';
+import { WelcomeDashboard } from '@/components/WelcomeDashboard';
+import { SyllabusExplorer } from '@/components/SyllabusExplorer';
+import { ArrowLeft } from 'lucide-react';
 
 const REG_LABELS: Record<string, string> = {
   'R2013': 'Admitted 2013–16',
@@ -23,58 +24,30 @@ const REG_LABELS: Record<string, string> = {
   'R2025': 'Admitted 2025 onwards',
 };
 
-function CalculatorContent() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  
-  const queryReg = searchParams.get('reg');
-  const queryDept = searchParams.get('dept');
-  const queryMode = searchParams.get('mode');
-
+function CalculatorContent({ mode, onBack }: { mode: 'sgpa' | 'cgpa', onBack: () => void }) {
   const { 
     regulation, setRegulation, department, setDepartment, getGrade, selections, 
     extraSubjects, manualSemData, cgpaSemesterCount, subjectCounts, getSelection, 
     getMasterSubjects, getElectivePools 
   } = useGpaStore();
 
-  const [mode, setMode] = useState<'sgpa' | 'cgpa'>((queryMode as 'sgpa' | 'cgpa') || 'cgpa');
   const [activeSem, setActiveSem] = useState<number>(1);
   const [isCalculated, setIsCalculated] = useState(false);
 
-  // Fresh start on mount (page refresh)
   useEffect(() => {
     window.scrollTo(0, 0);
-    // If there ARE params, clear them to force "start from first section"
-    if (queryReg || queryDept || queryMode) {
-      router.replace('/');
-    }
-    // and hidden results
     setIsCalculated(false);
-  }, [queryReg, queryDept, queryMode, router]); // Dependency array for lint
-
-  // Sync state ONLY when user explicitly changes things (already handled by handleRegChange etc)
-  // We remove the auto-sync-from-URL-on-mount to ensure a fresh start on every refresh
-
-  const updateUrl = (r: string, d: string, m: string) => {
-    router.replace(`/?reg=${r}&dept=${d}&mode=${m}`);
-  };
+  }, [mode]);
 
   const handleRegChange = (r: string) => {
     setRegulation(r);
-    updateUrl(r, department, mode);
-  };
-  
-  const handleModeChange = (m: 'sgpa' | 'cgpa') => {
-    setMode(m);
-    updateUrl(regulation, department, m);
   };
 
   const depOptions = regulationsData.find(x => x.reg === regulation)?.departments || [];
   
-  // Calculate Global CGPA Graph Data
   const chartData = [1,2,3,4,5,6,7,8].map(s => {
       if (mode === 'cgpa') {
-        const data = manualSemData[regulation]?.[department]?.[s] || { sgpa: '', credits: '' };
+        const data = manualSemData[regulation]?.[department]?.[s] || { gpa: '', credits: '' };
         const sgpa = parseFloat(data.sgpa) || 0;
         const totalCredits = parseInt(data.credits) || 0;
         const semCount = cgpaSemesterCount[regulation]?.[department] || 1;
@@ -126,7 +99,6 @@ function CalculatorContent() {
               grade: pickedCode ? getGrade(s, pickedCode) : ''
             };
          }
-         // Use slotCode as grade key for resolved manual slots (mirrors SemesterSection logic)
          const gradeKey = sub.slotCode || sub.code;
          return {
             credits: sub.credits, type: sub.type, grade: getGrade(s, gradeKey)
@@ -136,7 +108,6 @@ function CalculatorContent() {
       return { sem: s, sgpa, cgpa: 0, totalCredits: semInputs.reduce((sum, i) => i.grade ? sum + i.credits : sum, 0) };
   });
 
-  // Calculate cascading CGPA
   let runningCredits = 0;
   let runningPoints = 0;
   chartData.forEach(cd => {
@@ -150,11 +121,16 @@ function CalculatorContent() {
   const finalCgpa = runningCredits > 0 ? (runningPoints / runningCredits).toFixed(2) : '0.00';
   const activeSgpa = chartData.find(c => c.sem === activeSem)?.sgpa || 0;
 
-
   return (
-    <div className="flex flex-col gap-10 max-w-2xl mx-auto pb-24 px-4 relative">
-      
-      {/* 1. Regulation Picker */}
+    <div className="flex flex-col gap-10">
+      <motion.button 
+        whileHover={{ x: -4 }}
+        onClick={onBack}
+        className="flex items-center gap-2 text-primary font-space-grotesque font-bold uppercase tracking-widest text-[10px] self-start bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-full transition-colors mb-4"
+      >
+        <ArrowLeft size={14} /> Back to Dashboard
+      </motion.button>
+
       <motion.section 
         layout
         initial={{ opacity: 0, y: 30 }}
@@ -174,7 +150,6 @@ function CalculatorContent() {
         </div>
       </motion.section>
 
-      {/* 2. Department Picker */}
       <AnimatePresence>
         {depOptions.length > 0 && (
           <motion.section 
@@ -192,33 +167,13 @@ function CalculatorContent() {
               <DepartmentDropdown 
                 value={department} 
                 options={depOptions.map(d => d.dept)} 
-                onChange={(dept) => { setDepartment(dept); updateUrl(regulation, dept, mode); }} 
+                onChange={(dept) => setDepartment(dept)} 
               />
             </div>
           </motion.section>
         )}
       </AnimatePresence>
 
-      {/* 3. Mode Toggle */}
-      <motion.section 
-        layout
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="glass-panel p-8 rounded-[2.5rem] depth-tilt relative z-[35]"
-      >
-        <h2 className="text-[10px] font-space-grotesque font-black text-primary uppercase tracking-[0.4em] mb-6 text-glow-orange">
-          Calculation mode
-        </h2>
-        <div className="relative">
-          <ModeDropdown 
-            value={mode} 
-            onChange={handleModeChange}
-          />
-        </div>
-      </motion.section>
-
-      {/* 4. Semester Picker (Only for SGPA) */}
       <AnimatePresence>
         {mode === 'sgpa' && depOptions.length > 0 && department && (
           <motion.section 
@@ -239,7 +194,6 @@ function CalculatorContent() {
         )}
       </AnimatePresence>
 
-      {/* 5. Subject Entry Accordions */}
       <motion.section 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -274,7 +228,6 @@ function CalculatorContent() {
 
       </motion.section>
 
-      {/* 5. Calculate Button */}
       {!isCalculated && (
          <motion.div 
            initial={{ opacity: 0, scale: 0.9 }}
@@ -304,7 +257,6 @@ function CalculatorContent() {
          </motion.div>
       )}
 
-      {/* 6. Results Panel */}
       <AnimatePresence>
         {isCalculated && (
           <motion.section 
@@ -321,7 +273,6 @@ function CalculatorContent() {
                <div className="flex flex-col gap-10">
                  <div className="glass-panel rounded-[3rem] p-10 text-gray-900 shadow-[0_8px_50px_rgba(255,85,0,0.08)] flex flex-col items-center gap-10 relative overflow-hidden border-primary/20 depth-tilt">
                    <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 animate-pulse" />
-                   <div className="absolute bottom-0 left-0 w-80 h-80 bg-emerald-50 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
                    <div className="text-center z-10">
                      <p className="text-primary font-space-grotesque font-black text-xs tracking-[0.4em] uppercase mb-4">Cumulative Score</p>
                      <motion.h1 
@@ -358,7 +309,6 @@ function CalculatorContent() {
         )}
       </AnimatePresence>
 
-      {/* Sticky bar for mobile showing active SGPA in single mode, or overall CGPA context */}
       <AnimatePresence>
         {isCalculated && (
           <StickyResultBar sgpa={mode === 'sgpa' ? activeSgpa : parseFloat(finalCgpa)} />
@@ -368,10 +318,52 @@ function CalculatorContent() {
   );
 }
 
+function MainApp() {
+  const [activeTool, setActiveTool] = useState<'dashboard' | 'sgpa' | 'cgpa' | 'syllabus'>('dashboard');
+  const resetAll = useGpaStore(state => state.resetAll);
+
+  const handleBackToDashboard = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    resetAll();
+    setActiveTool('dashboard');
+  };
+
+  return (
+    <div className="max-w-3xl mx-auto pb-24 px-4 relative mt-12 md:mt-16">
+      <AnimatePresence mode="wait">
+        {activeTool === 'dashboard' && (
+          <motion.div key="dashboard" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, y: -20 }}>
+            <WelcomeDashboard onSelect={setActiveTool} />
+          </motion.div>
+        )}
+        
+        {(activeTool === 'sgpa' || activeTool === 'cgpa') && (
+          <motion.div key="calculator" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
+            <CalculatorContent mode={activeTool} onBack={handleBackToDashboard} />
+          </motion.div>
+        )}
+
+        {activeTool === 'syllabus' && (
+          <motion.div key="syllabus" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
+            <motion.button 
+              whileHover={{ x: -4 }}
+              onClick={handleBackToDashboard}
+              className="flex items-center gap-2 text-primary font-space-grotesque font-bold uppercase tracking-widest text-[10px] self-start bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-full transition-colors mb-4"
+            >
+              <ArrowLeft size={14} /> Back to Dashboard
+            </motion.button>
+            <SyllabusExplorer />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <Suspense fallback={<div className="p-12 text-center text-gray-400 font-space-grotesque tracking-widest animate-pulse">Initializing stellar systems...</div>}>
-      <CalculatorContent />
+      <MainApp />
     </Suspense>
   )
 }
